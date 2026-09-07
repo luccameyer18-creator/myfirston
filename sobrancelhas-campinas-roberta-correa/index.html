@@ -56,6 +56,10 @@
   header{position:relative;min-height:78vh;display:grid;align-items:end;
          padding:0 0 clamp(28px,7vw,64px);overflow:hidden}
   header .bg{position:absolute;inset:0;background:var(--suave) center/cover no-repeat}
+  /* A imagem gerada sai em 16:9 e a dobra do celular e vertical: com o recorte
+     centralizado sobra o teto e some a maca, que e o que diz do que se trata.
+     Puxando o foco para baixo, o assunto volta para dentro do quadro. */
+  header .bg.gerada{background-position:center 72%}
   header .bg::after{content:"";position:absolute;inset:0;
     background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 100%)}
   header .in{position:relative;color:#fff}
@@ -63,6 +67,12 @@
             text-shadow:0 2px 24px rgba(0,0,0,.35)}
   .lead{margin-top:10px;font-size:clamp(15px,4vw,19px);opacity:.94}
   .sem-capa header .in{color:var(--texto)}
+  /* Aviso de que a imagem de ambiente nao e do negocio. Discreto, mas legivel:
+     o dono precisa ver antes de perguntar "que estudio e esse?". */
+  .ilustra{position:absolute;top:12px;right:12px;z-index:4;padding:5px 10px;border-radius:999px;
+    background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.26);color:rgba(255,255,255,.86);
+    font:500 10px/1 ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    backdrop-filter:blur(3px)}
 
   /* Brilho por baixo do botao principal. */
   .cta{display:inline-flex;align-items:center;gap:9px;margin-top:22px;
@@ -166,6 +176,7 @@
 
 <header>
   <div class="bg" style="background-image:url('fotos/robertacorreabeaute-08.jpg')"></div>
+  
   <div class="wrap in">
     <h1 class="rev">Roberta Corrêa</h1>
     <p class="lead rev">Campinas · Salão de Beleza</p>

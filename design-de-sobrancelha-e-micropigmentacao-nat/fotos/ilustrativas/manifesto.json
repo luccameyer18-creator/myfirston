@@ -1,0 +1,13 @@
+{
+  "arquivo": "ambiente.png",
+  "origem": "ia_wix",
+  "endpoint": "social-publisher/v1/generate-image",
+  "nicho": "sobrancelhas",
+  "ramo": "Esteticista",
+  "prompt": "Interior de um estudio brasileiro de esteticista, pequeno e sofisticado. Maca de atendimento com lencol claro, luminaria de aro, espelho, bancada clara com poucos frascos organizados, planta discreta, parede em tom nude. Tom geral claro, nude e off-white, luz suave. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. A paleta dominante deve girar em torno de #a89078.",
+  "semente": "https://static.wixstatic.com/media/edffd6_dd93ce76c9a84cd780844dacc6c50273~mv2.jpg",
+  "executionId": "e71409dc-0dde-44f6-a4b3-efbae3334d46",
+  "fileId": "edffd6_270ae28b42e645a69e79e1047d92c7dc~mv2.png",
+  "gerada_em": "2026-09-07T12:19:32.079Z",
+  "aviso": "Imagem ILUSTRATIVA gerada por IA. Nao e foto do negocio. A pagina precisa declarar isso."
+}
