@@ -132,6 +132,7 @@ section h2{font-size:clamp(30px,7vw,52px);margin:10px 0 34px}
 .dias td{padding:9px 0;border-bottom:1px solid var(--filete);color:rgba(245,241,234,.78)}
 .dias td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .dias tr.hoje td{color:var(--accent);font-weight:500}
+.agora[hidden]{display:none}
 .agora{display:inline-block;margin-bottom:16px;padding:6px 13px;border-radius:999px;
   font:500 12px/1 Oswald,sans-serif;text-transform:uppercase;letter-spacing:.12em}
 .agora.sim{background:rgba(37,211,102,.14);color:#5fe08d;border:1px solid rgba(37,211,102,.4)}
@@ -232,10 +233,10 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
     <div class="rev">
       <p class="end">EDIFICIO DOT OFFICE, Rua Barão Geraldo de Rezende, 97 - Lj 02 - Botafogo, Campinas - SP, 13020-440</p>
       <a class="btn vazio" href="https://www.google.com/maps/place/CAPITA+BARBEARIA/data=!4m7!3m6!1s0x94c8c9f40f641527:0x928f5f1fffad691c!8m2!3d-22.8980476!4d-47.0657912!16s%2Fg%2F11h7b56z07!19sChIJJxVkD_TJyJQRHGmt_x9fj5I?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener">Como chegar</a>
-      <br><a class="tel" href="tel:+5519995177553">019995177553</a>
+      <br><a class="tel" href="tel:+5519995177553">(19) 99517-7553</a>
     </div>
     <div class="rev"><span class="agora" id="agora" hidden></span>
-      <table class="dias"><tr data-dia="domingo"><td>domingo</td><td>Fechado</td></tr><tr data-dia="segunda"><td>segunda</td><td>Fechado </td></tr><tr data-dia="terça"><td>terça</td><td>09:30–20:00</td></tr><tr data-dia="quarta"><td>quarta</td><td>09:30–20:00</td></tr><tr data-dia="quinta"><td>quinta</td><td>09:30–20:00</td></tr><tr data-dia="sexta"><td>sexta</td><td>09:30–20:00</td></tr><tr data-dia="sábado"><td>sábado</td><td>09:30–17:00</td></tr></table>
+      <table class="dias"><tr data-dia="domingo"><td>domingo</td><td>Fechado</td></tr><tr data-dia="segunda"><td>segunda</td><td>Fechado</td></tr><tr data-dia="terça"><td>terça</td><td>09:30–20:00</td></tr><tr data-dia="quarta"><td>quarta</td><td>09:30–20:00</td></tr><tr data-dia="quinta"><td>quinta</td><td>09:30–20:00</td></tr><tr data-dia="sexta"><td>sexta</td><td>09:30–20:00</td></tr><tr data-dia="sábado"><td>sábado</td><td>09:30–17:00</td></tr></table>
     </div>
   </div>
 </div></section>
@@ -253,7 +254,7 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
 <footer><div class="w">
   <div class="marca">Capita Barbearia</div>
   <p>EDIFICIO DOT OFFICE, Rua Barão Geraldo de Rezende, 97 - Lj 02 - Botafogo, Campinas - SP, 13020-440</p>
-  <p>019995177553</p>
+  <p>(19) 99517-7553</p>
   
   <p class="demo">Página de demonstração feita pela MyFirstOn com informações públicas
   do Google Maps e do Instagram deste negócio. Ainda não foi aprovada pelo proprietário.</p>
@@ -277,7 +278,17 @@ document.documentElement.classList.add('js');
     alvos.forEach(function (e) { e.classList.add('on'); });
   } else {
     var obs = new IntersectionObserver(function (ent) {
-      ent.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+      ent.forEach(function (e) {
+        /* Tambem revela o que JA PASSOU por cima da tela. Numa rolagem rapida o
+           elemento vai de "abaixo da tela" a "acima da tela" entre dois quadros e
+           o observer nunca o ve intersectando - sem esta segunda condicao o titulo
+           fica invisivel para sempre. Medido no site publicado: dois h2 presos em
+           opacity 0 depois de um deslize. */
+        if (e.isIntersecting || e.boundingClientRect.top < 0) {
+          e.target.classList.add('on');
+          obs.unobserve(e.target);
+        }
+      });
     }, { rootMargin: '0px 0px -8% 0px', threshold: .12 });
     alvos.forEach(function (e) { obs.observe(e); });
   }
@@ -306,7 +317,11 @@ document.documentElement.classList.add('js');
   if (sel && linhaHoje) {
     var faixa = (linhaHoje.cells[1] ? linhaHoje.cells[1].textContent : '') || '';
     var min = agoraD.getHours() * 60 + agoraD.getMinutes();
-    var pares = faixa.match(/(d{1,2})(?::(d{2}))?s*(?:h|:00)?s*(?:as|às|–|—|-|até)s*(d{1,2})(?::(d{2}))?/i);
+    /* As barras vao dobradas na fonte: isto e um template literal do TypeScript,
+       onde uma barra sozinha antes de "d" some. Foi o que aconteceu - a expressao
+       chegou ao HTML sem as barras e nunca casou com "09:00-21:00", sem erro
+       nenhum no console para denunciar. */
+    var pares = faixa.match(/(\d{1,2})(?::(\d{2}))?\s*(?:h|:00)?\s*(?:as|às|–|—|-|até)\s*(\d{1,2})(?::(\d{2}))?/i);
     if (/fechad/i.test(faixa)) {
       sel.textContent = 'Fechado hoje'; sel.className = 'agora nao'; sel.hidden = false;
     } else if (pares) {

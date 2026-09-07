@@ -216,7 +216,7 @@
     <div class="rev"><p class="rotulo">Onde estamos</p><h2 style="font-size:20px">R. Domício Pachêco e Silva, 1243 - Jardim Novo Campos Eliseos, Campinas - SP, 13060-190</h2>
       <p style="margin-top:10px"><a href="https://www.google.com/maps/place/Andressa+Sobrancelhas/data=!4m7!3m6!1s0x94c8c9ddc78872fd:0x78d29067c8db2ba4!8m2!3d-22.921692!4d-47.1079376!16s%2Fg%2F11t9r7vd_d!19sChIJ_XKIx93JyJQRpCvbyGeQ0ng?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener" style="color:var(--destaque-escuro)">Ver no mapa</a></p></div>
     <div class="rev"><p class="rotulo">Horários</p>
-      <table class="hs"><tr><td>domingo</td><td>Fechado</td></tr><tr><td>segunda</td><td>Fechado </td></tr><tr><td>terça</td><td>08:00–19:00</td></tr><tr><td>quarta</td><td>08:00–19:00</td></tr><tr><td>quinta</td><td>08:00–19:00</td></tr><tr><td>sexta</td><td>08:00–21:00</td></tr><tr><td>sábado</td><td>08:00–18:00</td></tr></table></div>
+      <table class="hs"><tr><td>domingo</td><td>Fechado</td></tr><tr><td>segunda</td><td>Fechado</td></tr><tr><td>terça</td><td>08:00–19:00</td></tr><tr><td>quarta</td><td>08:00–19:00</td></tr><tr><td>quinta</td><td>08:00–19:00</td></tr><tr><td>sexta</td><td>08:00–21:00</td></tr><tr><td>sábado</td><td>08:00–18:00</td></tr></table></div>
   </div>
 </section>
 
@@ -246,7 +246,10 @@
     var obs = new IntersectionObserver(function (ents) {
       ents.forEach(function (e) {
         // unobserve: revela uma vez so. Re-animar a cada rolagem enjoa.
-        if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target) }
+        /* Tambem revela o que JA PASSOU por cima da tela: numa rolagem rapida o
+           elemento vai de abaixo para acima da tela entre dois quadros e o
+           observer nunca o ve intersectando - o titulo ficaria invisivel. */
+        if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add('on'); obs.unobserve(e.target) }
       })
     }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
     alvos.forEach(function (e) { obs.observe(e) });

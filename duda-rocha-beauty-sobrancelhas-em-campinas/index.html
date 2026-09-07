@@ -227,7 +227,7 @@
     <div class="rev"><p class="rotulo">Onde estamos</p><h2 style="font-size:20px">Mix Shopping - R. Ferreira Penteado, 341 - 1° piso - Box 187 - Centro, Campinas - SP, 13010-041</h2>
       <p style="margin-top:10px"><a href="https://www.google.com/maps/place/Duda+Rocha+Beauty+%7C+SOBRANCELHAS+EM+CAMPINAS/data=!4m7!3m6!1s0x94c8c95229c2c299:0x6a68547a1103dfc!8m2!3d-22.9075812!4d-47.0619479!16s%2Fg%2F11ms6nc9vl!19sChIJmcLCKVLJyJQR_D0QoUeFpgY?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener" style="color:var(--destaque-escuro)">Ver no mapa</a></p></div>
     <div class="rev"><p class="rotulo">Horários</p>
-      <table class="hs"><tr><td>domingo</td><td>Fechado</td></tr><tr><td>segunda</td><td>09:00–19:00 </td></tr><tr><td>terça</td><td>09:00–19:00</td></tr><tr><td>quarta</td><td>09:00–19:00</td></tr><tr><td>quinta</td><td>09:00–19:00</td></tr><tr><td>sexta</td><td>09:00–19:00</td></tr><tr><td>sábado</td><td>09:00–16:00</td></tr></table></div>
+      <table class="hs"><tr><td>domingo</td><td>Fechado</td></tr><tr><td>segunda</td><td>09:00–19:00</td></tr><tr><td>terça</td><td>09:00–19:00</td></tr><tr><td>quarta</td><td>09:00–19:00</td></tr><tr><td>quinta</td><td>09:00–19:00</td></tr><tr><td>sexta</td><td>09:00–19:00</td></tr><tr><td>sábado</td><td>09:00–16:00</td></tr></table></div>
   </div>
 </section>
 
@@ -257,7 +257,10 @@
     var obs = new IntersectionObserver(function (ents) {
       ents.forEach(function (e) {
         // unobserve: revela uma vez so. Re-animar a cada rolagem enjoa.
-        if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target) }
+        /* Tambem revela o que JA PASSOU por cima da tela: numa rolagem rapida o
+           elemento vai de abaixo para acima da tela entre dois quadros e o
+           observer nunca o ve intersectando - o titulo ficaria invisivel. */
+        if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add('on'); obs.unobserve(e.target) }
       })
     }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
     alvos.forEach(function (e) { obs.observe(e) });
