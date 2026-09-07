@@ -20,16 +20,14 @@
 <meta property="og:title" content="Brenda Alves">
 <meta property="og:description" content="47,9 mil · AGORA MENTORA · CÍLIOS · CLIENTES — Jardim Campos Elíseos, Campinas">
 <meta property="og:url" content="https://myfirston.github.io/cilios-e-sobrancelhas-campinas-brenda-alves/">
-<meta property="og:image" content="fotos/maps-01.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#c06090">
+<meta name="theme-color" content="#b08968">
 
 <style>
   :root{
-    --fundo:#f9eff4; --texto:#301818; --destaque:#c06090;
-    --sobre-destaque:#ffffff; --destaque-escuro:#90486c;
+    --fundo:#faf7f4; --texto:#2b2723; --destaque:#b08968;
+    --sobre-destaque:#ffffff; --destaque-escuro:#84674e;
     --suave:color-mix(in srgb, var(--destaque) 12%, var(--fundo));
     --borda:color-mix(in srgb, var(--texto) 12%, transparent);
   }
@@ -83,15 +81,29 @@
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
   @media(min-width:900px){.servicos{grid-template-columns:repeat(3,minmax(260px,1fr))}}
-  .serv{display:flex;justify-content:space-between;align-items:center;gap:14px;
+  .serv{position:relative;display:flex;justify-content:space-between;align-items:center;gap:14px;
         padding:20px 22px;background:var(--suave);border:1px solid var(--borda);
         border-radius:15px;text-decoration:none;color:inherit;
-        transition:transform .18s ease-out,box-shadow .18s ease-out}
-  .serv:hover,.serv:focus-visible{transform:translateY(-2px);
+        transition:transform .18s ease-out,box-shadow .18s ease-out;
+        -webkit-tap-highlight-color:transparent}
+  /* A luz por baixo: um halo desfocado atras do card, que acende no toque.
+     Fica em ::after com z-index negativo para nao capturar o clique. */
+  .serv::after{content:"";position:absolute;left:12%;right:12%;bottom:-6px;height:22px;
+        border-radius:999px;background:var(--destaque);filter:blur(16px);
+        opacity:0;transition:opacity .22s ease-out;z-index:-1}
+  .serv:hover,.serv:focus-visible,.serv:active{transform:translateY(-2px);
         box-shadow:0 12px 26px -12px color-mix(in srgb,var(--destaque) 70%,transparent)}
+  .serv:hover::after,.serv:focus-visible::after,.serv:active::after{opacity:.5}
+  /* No celular nao existe hover: o retorno vem do toque. */
+  @media (hover:none){.serv:active{transform:scale(.985)}}
   .serv b{font-weight:600;font-size:16.5px}
   .serv span{flex:none;width:30px;height:30px;border-radius:50%;background:var(--destaque);
         color:var(--sobre-destaque);display:grid;place-items:center;font-size:15px}
+
+  .sobre{display:grid;gap:24px;align-items:center}
+  @media(min-width:700px){.sobre{grid-template-columns:minmax(0,320px) 1fr;gap:38px}}
+  .sobre img{width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:16px;
+             display:block;margin:0 auto}
 
   .prova{display:flex;flex-wrap:wrap;align-items:center;gap:18px;
          padding:26px;background:var(--suave);border-radius:18px;border:1px solid var(--borda)}
@@ -100,8 +112,30 @@
 
   .galeria{display:grid;gap:9px;grid-template-columns:repeat(2,1fr)}
   @media(min-width:700px){.galeria{grid-template-columns:repeat(3,1fr)}}
+  /* Com 4 fotos, 3 colunas deixariam uma sozinha na segunda fileira. */
+  .galeria.q4{grid-template-columns:repeat(2,1fr)}
+  @media(min-width:700px){.galeria.q4{grid-template-columns:repeat(2,1fr)}}
+  .galeria button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:12px;
+               overflow:hidden;-webkit-tap-highlight-color:transparent}
   .galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;display:block;
-               background:var(--suave)}
+               background:var(--suave);transition:transform .35s ease-out}
+  .galeria button:hover img,.galeria button:focus-visible img{transform:scale(1.045)}
+  @media (hover:none){.galeria button:active img{transform:scale(.97)}}
+
+  /* Ampliar a foto: no celular a miniatura e pequena demais para ela ver o
+     trabalho, que e justamente o que precisa convencer. */
+  .lupa{position:fixed;inset:0;z-index:50;display:none;place-items:center;
+        background:rgba(20,16,14,.93);padding:16px;cursor:zoom-out}
+  .lupa.on{display:grid}
+  .lupa img{max-width:100%;max-height:88vh;border-radius:10px;
+        animation:entra .28s cubic-bezier(.22,.61,.36,1)}
+  @keyframes entra{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+  .lupa .fechar{position:absolute;top:14px;right:16px;width:42px;height:42px;border:0;
+        border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:22px;
+        line-height:1;cursor:pointer}
+  .lupa .nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;
+        border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer}
+  .lupa .ant{left:12px} .lupa .prox{right:12px}
 
   .info{display:grid;gap:26px}
   @media(min-width:700px){.info{grid-template-columns:1fr 1fr}}
@@ -126,10 +160,10 @@
   @media(min-width:760px){.barra{display:none} footer{padding-bottom:36px}}
 </style>
 </head>
-<body class="">
+<body class="sem-capa">
 
 <header>
-  <div class="bg" style="background-image:url('fotos/maps-01.jpg')"></div>
+  <div class="bg"></div>
   <div class="wrap in">
     <h1 class="rev">Brenda Alves</h1>
     <p class="lead rev">Campinas · Salão de Beleza</p>
@@ -172,6 +206,8 @@
 </section>
 
 
+
+
 <section class="wrap">
   <div class="prova rev">
     <div class="nota">5</div>
@@ -183,12 +219,6 @@
 </section>
 
 
-<section class="wrap">
-  <p class="rotulo rev">Nosso trabalho</p>
-  <div class="galeria">
-    <img class="rev" src="fotos/maps-02.jpg" alt="Foto de Brenda Alves" loading="lazy" decoding="async" style="--i:0">
-  </div>
-</section>
 
 <section class="wrap">
   <div class="info">
@@ -203,6 +233,13 @@
   <p>Cílios e Sobrancelhas Campinas - Brenda Alves · R. Cons Martim Francisco, 20 - Jardim Campos Elíseos, Campinas - SP, 13060-033</p>
   <p style="margin-top:6px">Prévia de site preparada pela MyFirstOn com informações públicas do Google.</p>
 </footer>
+
+<div class="lupa" id="lupa" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="fechar" type="button" aria-label="Fechar">&times;</button>
+  <button class="nav ant" type="button" aria-label="Anterior">&lsaquo;</button>
+  <img alt="">
+  <button class="nav prox" type="button" aria-label="Próxima">&rsaquo;</button>
+</div>
 
 <div class="barra"><a class="cta" href="https://wa.me/5519998944728" target="_blank" rel="noopener">Falar no WhatsApp</a></div>
 
@@ -231,6 +268,38 @@
       barra.classList.toggle('on', !es[0].isIntersecting)
     }, { threshold: 0 }).observe(hero);
   } else if (barra) { barra.classList.add('on') }
+
+  // Ampliar foto. Sem biblioteca: overlay, setas e teclado.
+  var lupa = document.getElementById('lupa');
+  if (lupa) {
+    var fotos = [].slice.call(document.querySelectorAll('.galeria button img'));
+    var alvo = lupa.querySelector('img'), atual = 0;
+    function mostrar(i) {
+      if (!fotos.length) return;
+      atual = (i + fotos.length) % fotos.length;
+      alvo.src = fotos[atual].src;
+      alvo.alt = fotos[atual].alt;
+      lupa.classList.add('on');
+      document.body.style.overflow = 'hidden';
+    }
+    function fechar() { lupa.classList.remove('on'); document.body.style.overflow = '' }
+    document.querySelectorAll('.galeria button').forEach(function (b, i) {
+      b.addEventListener('click', function () { mostrar(i) })
+    });
+    lupa.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t.classList.contains('prox')) { mostrar(atual + 1); return }
+      if (t.classList.contains('ant')) { mostrar(atual - 1); return }
+      if (t === alvo) return;   // clique na propria foto nao fecha
+      fechar()
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!lupa.classList.contains('on')) return;
+      if (e.key === 'Escape') fechar();
+      if (e.key === 'ArrowRight') mostrar(atual + 1);
+      if (e.key === 'ArrowLeft') mostrar(atual - 1);
+    });
+  }
 </script>
 </body>
 </html>

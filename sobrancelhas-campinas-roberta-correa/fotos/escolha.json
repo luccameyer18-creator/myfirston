@@ -1,0 +1,36 @@
+{
+  "capa": "robertacorreabeaute-08.jpg",
+  "capa_porque": "Unica foto de TRABALHO que se explica sozinha em um segundo: retrato de cliente com a sobrancelha desenhada bem no miolo do quadro, rosto centralizado, luz boa, fundo limpo, sem texto queimado e sem colagem. Sobrevive ao corte quadrado do cartao do WhatsApp porque o rosto e as sobrancelhas ficam no centro horizontal e vertical. As outras duas fotos de trabalho nao servem de capa: a 07 e colagem (antes/depois lado a lado, proibido na capa) e a 05 tem o rosto cortado ao meio na borda esquerda, com metade do quadro em parede vazia, entao no corte quadrado o assunto sai do miolo.",
+  "galeria": [
+    "robertacorreabeaute-07.jpg",
+    "robertacorreabeaute-05.jpg"
+  ],
+  "descartadas": [
+    {
+      "arquivo": "robertacorreabeaute-01.jpg",
+      "motivo": "Selfie da profissional no salao segurando um pincel, mas com as palavras 'cpf x cnpj' queimadas em letra grande sobre a imagem - e post de conteudo sobre abrir empresa, nao mostra resultado, e o texto na foto elimina o uso como capa ou retrato."
+    },
+    {
+      "arquivo": "robertacorreabeaute-02.jpg",
+      "motivo": "Colagem de antes/depois empilhada com legendas manuscritas queimadas por cima ('O que a cliente pediu' / 'O que eu entreguei') - mostra trabalho real, mas e colagem com texto na imagem, o que a regra descarta."
+    },
+    {
+      "arquivo": "robertacorreabeaute-03.jpg",
+      "motivo": "Casal ao ar livre com baloes de coracao, bolo, ursinho e buque num piquenique a beira do lago - e cha revelacao/pedido de casamento, vida pessoal com terceiros, nada do servico."
+    },
+    {
+      "arquivo": "robertacorreabeaute-04.jpg",
+      "motivo": "Casal abracado de costas em contraluz de fim de tarde, ninguem de frente e nenhuma sobrancelha visivel - foto pessoal, nao mostra o trabalho nem o espaco."
+    },
+    {
+      "arquivo": "robertacorreabeaute-06.jpg",
+      "motivo": "Selfie no espelho com vestido verde longo dentro de um restaurante de parede de tijolo - vida pessoal fora do ambiente de trabalho, nao serve nem como retrato profissional."
+    },
+    {
+      "arquivo": "robertacorreabeaute-09.jpg",
+      "motivo": "Ampulheta decorativa sobre um movel com a frase 'momento de se cuidar / pausa para respirar' gravada no vidro - objeto de decoracao com texto, nao mostra servico nem o estudio, e ainda vem de outro perfil (taynabeaute) segundo o manifesto."
+    }
+  ],
+  "observacao": "O acervo esta magro para o que a pagina precisa: das 9 imagens, so 3 mostram o trabalho (08, 07 e 05) e duas delas sao variacoes do mesmo enquadramento (rosto de cliente em close). Por isso a galeria fechou em 2, e nao em 4 ou 6 - preferi deixar a grade curta e limpa a completar com colagem legendada ou foto pessoal. Falta o basico do nicho: (1) nenhuma foto do espaco - nem cabine, nem maca, nem recepcao, nem fachada, entao a pagina nao consegue mostrar onde a cliente e atendida; (2) nenhuma foto do servico sendo feito (a mao trabalhando, a pinca, o mapeamento no rosto), que e a imagem que mais transmite tecnica; (3) nenhum retrato limpo da Roberta - a unica foto dela no salao tem 'cpf x cnpj' escrito por cima, e a outra e selfie de espelho em restaurante, entao o campo retrato ficou vazio de proposito. Vale pedir ao dono, em ordem de prioridade: um plano aberto do estudio com a luz acesa e a maca arrumada; 2 ou 3 fotos dela atendendo uma cliente (pode ser feita pelo celular, de lado, sem mostrar o rosto da cliente se ela nao autorizar); um retrato dela no ambiente de trabalho, sem filtro de texto; e 3 a 4 resultados finais salvos SOLTOS, sem montagem de antes/depois e sem legenda queimada - o mesmo material que ela ja tem, so que exportado antes de passar pelo editor do Instagram. Com isso a galeria sobe para 6 e a capa pode virar o espaco ou o atendimento, que vende melhor que um close isolado.",
+  "em": "2026-09-07T11:45:39.234Z"
+}

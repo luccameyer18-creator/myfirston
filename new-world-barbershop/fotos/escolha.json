@@ -1,0 +1,30 @@
+{
+  "capa": "newworldbarbershop-08.jpg",
+  "capa_porque": "E a unica foto em plano aberto do interior: sala de espera com poltronas de couro capitone, mesa de centro com revistas, globo-bar, papel de parede vermelho e teto de estanho. Nao tem texto queimado, nao e colagem e nao depende de legenda - em um segundo se le \"barbearia com ambiente caprichado\". No corte quadrado do cartao do WhatsApp o miolo ainda pega poltronas, mesa e globo, entao o assunto sobrevive. E, por ser plano aberto sem rosto, funciona como textura de fundo atras do nome em tipografia gigante, que e o que o template de barbearia pede - qualquer close de rosto (07, 05, 03) ficaria com a cara cortada pelo letreiro.",
+  "galeria": [
+    "newworldbarbershop-07.jpg",
+    "newworldbarbershop-05.jpg",
+    "newworldbarbershop-03.jpg",
+    "newworldbarbershop-02.jpg"
+  ],
+  "descartadas": [
+    {
+      "arquivo": "newworldbarbershop-01.jpg",
+      "motivo": "Arte publicitaria: foto em preto e branco coberta por moldura decorativa, logo da barbearia no centro e a frase VENHA VIVER ESTA EXPERIENCIA em tipografia gigante - texto queimado na imagem, proibido para capa e ruim na grade."
+    },
+    {
+      "arquivo": "newworldbarbershop-04.jpg",
+      "motivo": "Close de uma mao tatuada segurando uma garrafa de Heineken sobre a capa de corte; o assunto da foto e a marca de cerveja de terceiro, nao o servico da barbearia."
+    },
+    {
+      "arquivo": "newworldbarbershop-06.jpg",
+      "motivo": "Costas de um homem exibindo camiseta estampada com o letreiro BARBEARIA PURA E SIMPLES BRASIL - e arte com texto por cima, nao mostra corte, barba nem o espaco."
+    },
+    {
+      "arquivo": "newworldbarbershop-09.jpg",
+      "motivo": "Flyer azul de FELIZ ANO NOVO com aviso RETORNAMOS 13/01/26 - data comemorativa, 100% tipografia, zero servico."
+    }
+  ],
+  "observacao": "O acervo prova bem o servico de barba (toalha quente, espuma, navalha) e o clima da casa, mas tem tres buracos. 1) Nao existe nenhuma foto de corte de cabelo finalizado - nenhum resultado pronto, nenhum antes/depois; para uma barbearia isso e o principal produto e hoje a pagina nao consegue mostra-lo. 2) Nao existe foto da fachada nem da area de corte em plano aberto com as cadeiras de barbeiro - a unica foto aberta e a sala de espera, que sozinha pode ser lida como lounge; a 02, apontada para o teto, desperdica metade do quadro em teto branco e so entrou na galeria por mostrar a decoracao e a bancada de produtos. 3) Nao ha retrato do dono ou da equipe, por isso o campo retrato ficou vazio: o barbeiro aparece de perfil e concentrado no cliente nas fotos 03, 05 e 07, que sao registro de trabalho, nao retrato. Vale pedir ao dono, nesta ordem: foto da fachada com a placa em luz do dia; duas ou tres fotos de corte finalizado, cliente de frente, luz da janela, sem filtro; um plano aberto do salao com as cadeiras de barbeiro; e um retrato dele e da equipe de uniforme dentro da barbearia. Com isso a capa migra para a fachada ou para o salao e a galeria fecha em 6 com variacao real de enquadramento.",
+  "em": "2026-09-07T11:45:39.234Z"
+}

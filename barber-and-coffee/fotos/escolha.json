@@ -1,0 +1,39 @@
+{
+  "capa": "barberecoffee-09.jpg",
+  "capa_porque": "E a unica foto do acervo que se explica sozinha em um segundo: barbeiro de avental e camisa amarela passando a maquina na nuca de um cliente sentado na cadeira, com o salao e um poste de barbeiro visiveis ao fundo. O assunto esta no miolo do quadro, entao sobrevive ao corte quadrado do cartao do WhatsApp, e nao ha nenhum texto queimado na imagem. Nao e close de rosto: e plano medio-aberto com bastante ambiente em volta, entao ainda funciona como textura de fundo atras da tipografia gigante do template de barbearia. O unico plano realmente aberto do salao (barberecoffee-02.jpg) foi preterido porque o miolo dele e as costas de uma pessoa e o primeiro plano esta tomado por garrafas desfocadas - no corte quadrado ninguem entenderia que e uma barbearia.",
+  "galeria": [
+    "barberecoffee-02.jpg"
+  ],
+  "descartadas": [
+    {
+      "arquivo": "barberecoffee-01.jpg",
+      "motivo": "Flyer de \"BOM DIA!\" com horario de funcionamento e chamada de Dia dos Namorados escritos por cima da foto - a imagem de barbearia que existe ali esta soterrada por texto e nunca poderia virar capa nem grade."
+    },
+    {
+      "arquivo": "barberecoffee-03.jpg",
+      "motivo": "Arte ilustrada de promocao (\"CORTE GRATIS PARA CRIANCAS ATE 12 ANOS\", sabado 5 de julho) com desenho, checklist e QR code: e peca de campanha vencida, nao mostra o trabalho real da casa."
+    },
+    {
+      "arquivo": "barberecoffee-04.jpg",
+      "motivo": "Frame de reel apontado para uma porta e uma parede de tijolo, com a tarja amarela \"Domingo tambem e dia!\" cortando o meio - nao da para dizer o que a foto mostra e o texto queima a imagem."
+    },
+    {
+      "arquivo": "barberecoffee-05.jpg",
+      "motivo": "Arte de \"BARBEARIA KIDS\" com um personagem de videogame desenhado: e ilustracao de terceiro com texto gigante por cima, zero conteudo real do negocio e ainda usa personagem que nao e da barbearia."
+    },
+    {
+      "arquivo": "barberecoffee-06.jpg",
+      "motivo": "Foto de uma mao segurando um celular que exibe um card amarelo de aviso sobre abrir aos domingos - o assunto da imagem e o anuncio na tela, e o salao ao fundo aparece desfocado e cortado."
+    },
+    {
+      "arquivo": "barberecoffee-07.jpg",
+      "motivo": "Flyer inteiro de texto sobre listras laranja (\"ganhe R$5 de desconto\", atendimento a partir de 1 ano) - e so arte promocional, nao ha uma unica imagem do servico."
+    },
+    {
+      "arquivo": "barberecoffee-08.jpg",
+      "motivo": "Barbeiro atendendo um bebe no colo da mae: e trabalho real, mas o enquadramento esta comprometido - a nuca e o ombro da mae, desfocados, tomam quase metade esquerda do quadro e o corte do bebe mal aparece, alem de expor clientes (inclusive uma crianca) num material que vai para o ar."
+    }
+  ],
+  "observacao": "O acervo esta invertido: das 9 imagens, 6 sao flyer ou arte com texto queimado e apenas 3 mostram a barbearia funcionando - e duas dessas tres sao frames de reel mal enquadrados. Sobrou material para uma capa decente e uma galeria minima de 2, e so. Falta o basico: (1) fachada do ponto, de dia, com a placa legivel - hoje nao existe nenhuma foto do lado de fora; (2) um plano aberto e limpo do salao, sem ninguem de costas no centro e sem frascos na frente da lente, que e o que o template de barbearia pede como fundo; (3) resultado de corte em close, de preferencia 3 ou 4 cortes diferentes (degrade, barba feita, corte infantil), que e o que convence quem esta escolhendo barbeiro; (4) um retrato do dono ou da equipe no ambiente de trabalho, olhando para a camera - por isso o campo retrato ficou vazio, nao ha nenhum candidato. E o mais gritante: o negocio se chama Barber and Coffee e nao ha uma unica foto de cafe, do balcao ou da area de espera. O nome promete duas coisas e o acervo nao entrega a segunda. Vale pedir ao dono um lote novo pelo celular mesmo, com luz do dia, na horizontal, sem escrever nada por cima - e avisar que fotos com rosto de cliente so entram no site com autorizacao dele.",
+  "em": "2026-09-07T11:45:39.234Z"
+}

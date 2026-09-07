@@ -1,0 +1,61 @@
+{
+  "negocio": "Barber and Coffee",
+  "ramo": "servico local",
+  "capturado_em": "2026-09-07T11:30:21.575Z",
+  "arquivos": [
+    {
+      "nome": "barberecoffee-01.jpg",
+      "data": "2026-06-08T13:39:35.365Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/p/DZU69m2BnPZ/"
+    },
+    {
+      "nome": "barberecoffee-02.jpg",
+      "data": "2025-07-05T14:34:58.390Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/reel/DLusnf-xjQ2/"
+    },
+    {
+      "nome": "barberecoffee-03.jpg",
+      "data": "2025-07-03T14:30:38.386Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/p/DLpiiAsxo3N/"
+    },
+    {
+      "nome": "barberecoffee-04.jpg",
+      "data": "2025-06-29T15:15:35.933Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/reel/DLfUfzSRm11/"
+    },
+    {
+      "nome": "barberecoffee-05.jpg",
+      "data": "2025-06-28T14:05:43.764Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/p/DLcntL9x6i4/"
+    },
+    {
+      "nome": "barberecoffee-06.jpg",
+      "data": "2025-06-26T00:12:29.750Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/p/DLV-wpux2nU/"
+    },
+    {
+      "nome": "barberecoffee-07.jpg",
+      "data": "2025-06-24T21:44:31.205Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/p/DLTJB-GRwlm/"
+    },
+    {
+      "nome": "barberecoffee-08.jpg",
+      "data": "2025-06-23T23:19:01.474Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/p/DLQvDRExRD8/"
+    },
+    {
+      "nome": "barberecoffee-09.jpg",
+      "data": "2025-06-22T18:08:53.623Z",
+      "origem": "instagram",
+      "post": "https://www.instagram.com/barberecoffee/reel/DLNmw7PRWXU/"
+    }
+  ]
+}

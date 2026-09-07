@@ -1,0 +1,17 @@
+{
+  "capa": "",
+  "capa_porque": "Nenhuma das 2 imagens da pasta e uma foto do negocio: as duas sao capturas de tela da interface do Google Maps, com elementos de UI (mapa, botoes de filtro, botao de fechar, nome e nota do estabelecimento, rotulo \"Mais de 313 fotos\") queimados dentro do arquivo. Nao existe um unico arquivo limpo de TRABALHO, entao aplico a regra que vale mais que ter foto e devolvo capa vazia. Colocar qualquer uma delas no cartao do WhatsApp mostraria ao dono um print do proprio perfil do Maps — ele veria na hora que a pagina foi montada raspando a ficha dele, e nao entendendo o trabalho dele. Pagina sem foto e melhor que isso.",
+  "galeria": [],
+  "descartadas": [
+    {
+      "arquivo": "maps-01.jpg",
+      "motivo": "Screenshot vertical (816x1228) do painel do Google Maps: aparece o mapa com os botoes \"Classificacao\" e \"Horas\", um botao X de fechar por cima da imagem, e embaixo o texto \"Andressa Sobrancelhas / 5,0 (202) / Salao de Beleza\" com as abas \"Visao geral\" e \"Avaliacoes\" — ha de fato uma mulher sentada numa cadeira contra parede rosa (provavelmente a Andressa, no estudio), mas ela esta presa dentro do print, com UI e texto por cima e cortada pela moldura da tela, entao nao serve nem como capa nem como retrato."
+    },
+    {
+      "arquivo": "maps-02.jpg",
+      "motivo": "Miniatura de 282x328 px do bloco de fotos do Maps: close de uma sobrancelha bem desenhada (o servico de verdade) com a legenda \"Mais de 313 fotos\" escrita por cima e cantos arredondados do card — texto queimado na imagem e resolucao baixa demais para virar capa ou item de galeria."
+    }
+  ],
+  "observacao": "Falta o acervo inteiro: a pasta nao tem uma unica foto, so 2 prints de tela. Nem manifesto ajuda — as duas entradas tem \"data\": null e \"origem\": \"google_maps\" apontando para a mesma URL de place, ou seja, ninguem baixou foto nenhuma, so fotografaram a tela. O sinal mais importante esta dentro do proprio maps-02.jpg: o rotulo diz \"Mais de 313 fotos\". O material existe e e abundante no perfil do Maps dela, so nao foi coletado — isto e falha de coleta, nao carencia do negocio. Antes de pedir qualquer coisa ao dono, vale refazer a coleta baixando os arquivos originais da aba de fotos do Maps (e do Instagram, se houver) em vez de printar a interface. Se ainda assim faltar, pedir a Andressa: (1) 3 a 4 antes-e-depois de sobrancelha em close, com luz boa e sem filtro; (2) 1 foto do espaco de atendimento em plano aberto, com a maca e o espelho, para dar noção do estudio; (3) 1 foto dela atendendo, maos no trabalho; (4) 1 retrato dela no estudio, olhando para a camera — o print sugere que ela ja tem esse retrato feito em estudio com fundo rosa, entao provavelmente basta pedir o arquivo original. Pedir sempre o arquivo original, nunca screenshot, e sem nada escrito por cima. Observacao de cadastro: o manifesto traz \"ramo\": \"servico local\", enquanto o proprio Maps classifica como \"Salao de Beleza\" — vale corrigir o campo.",
+  "em": "2026-09-07T11:45:39.234Z"
+}

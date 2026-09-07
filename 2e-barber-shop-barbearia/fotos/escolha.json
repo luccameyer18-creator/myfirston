@@ -1,0 +1,24 @@
+{
+  "capa": "2ebarbershop-08.jpg",
+  "capa_porque": "E a unica foto de plano aberto do salao: mostra o barbeiro de pe cortando o cabelo de um cliente na cadeira, com a loja inteira em volta (espelhos, prateleira de produtos, TV, piso branco). Le-se em um segundo, sem legenda, que aquilo e uma barbearia de verdade em funcionamento. Nao tem texto queimado nem colagem, e o assunto (cadeira + cliente + barbeiro) esta no miolo do quadro, entao sobrevive ao corte quadrado do cartao do WhatsApp. E exatamente o tipo de imagem que funciona como textura de fundo atras do nome em tipografia gigante — close de rosto, como nas outras, ficaria estranho nesse lugar.",
+  "galeria": [
+    "2ebarbershop-09.jpg",
+    "2ebarbershop-01.jpg",
+    "2ebarbershop-04.jpg",
+    "2ebarbershop-02.jpg",
+    "2ebarbershop-05.jpg",
+    "2ebarbershop-03.jpg"
+  ],
+  "descartadas": [
+    {
+      "arquivo": "2ebarbershop-06.jpg",
+      "motivo": "Rapaz de moletom sentado de bracos cruzados na cadeira, com luz baixa e olhar fora da camera: nao mostra o servico sendo feito nem se confirma que seja o dono ou alguem da equipe, entao nao serve nem como trabalho nem como retrato profissional."
+    },
+    {
+      "arquivo": "2ebarbershop-07.jpg",
+      "motivo": "Frame de reel do canto da loja, torto na diagonal, escuro e com uma sombra grande atrapalhando a frente; mostra so um movel e uma parede, sem pessoa e sem assunto legivel."
+    }
+  ],
+  "observacao": "O acervo e bom no que importa (tem trabalho de verdade em 7 das 9 fotos) mas e muito repetitivo no enquadramento: cinco imagens sao o mesmo plano de perfil da nuca/lateral do cliente depois do corte, todas verticais, todas de corte masculino com degrade. So existe UM plano aberto do salao (o 08, que virou capa) e UM do servico sendo feito (o 09) — se qualquer um dos dois cair, a pagina fica sem imagem que explique o negocio. Falta completamente: fachada com a placa e o nome, foto do salao cheio em horario de movimento, foto da recepcao e da prateleira de produtos, imagem horizontal (todas sao verticais de reel, o que aperta o corte em desktop) e qualquer registro de barba/navalha, mesmo sendo barbearia. Vale pedir ao dono, em ordem de prioridade: (1) foto da fachada de dia, com a placa legivel; (2) retrato dele e da equipe no salao, olhando para a camera, com boa luz — hoje nao ha nenhum retrato aproveitavel e por isso o campo ficou vazio; (3) duas ou tres fotos do espaco vazio e bem iluminado, na horizontal; (4) foto de barba sendo feita. Nao inventar nada disso: se nao vier do dono, a pagina fica com o que existe.",
+  "em": "2026-09-07T11:45:39.234Z"
+}
