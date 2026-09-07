@@ -4,10 +4,10 @@
   "endpoint": "social-publisher/v1/generate-image",
   "nicho": "barbearia",
   "ramo": "Barbearia",
-  "prompt": "Interior de uma barbearia masculina brasileira de bairro, bem cuidada. Cadeira de barbeiro de couro, bancada de madeira escura, espelho grande, prateleira com frascos de produto, piso escuro, detalhes em latao. Tom geral escuro e quente, clima noturno. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. A paleta dominante deve girar em torno de #009048.",
+  "prompt": "Interior de uma barbearia masculina brasileira de bairro, bem cuidada. Cadeira de barbeiro de couro, bancada de madeira escura, espelho grande, prateleira com frascos de produto, piso escuro, detalhes em latao. Tom geral escuro e quente, clima noturno. Enquadramento em diagonal, duas cadeiras em fila e o corredor entre elas. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. Se houver espelho, ele deve refletir corretamente o que esta a sua frente. Detalhes pontuais na cor #009048 (estofado, frascos ou luminaria), mantendo o ambiente em tons naturais - nao tingir a cena inteira nessa cor.",
   "semente": "https://static.wixstatic.com/media/edffd6_1733bb7a62f24bf8ad62bcf3ab2d62c5~mv2.png",
-  "executionId": "2521b43c-23d9-4f9e-92ab-45c2f7b942ed",
-  "fileId": "edffd6_021b1445e30748a894db39cb45153277~mv2.png",
-  "gerada_em": "2026-09-07T12:17:57.605Z",
+  "executionId": "787f17d6-2c34-4fd2-9c15-2d8025ad0d03",
+  "fileId": "edffd6_711b1b51b7104570ac004d1dd3d99e31~mv2.png",
+  "gerada_em": "2026-09-07T12:37:21.986Z",
   "aviso": "Imagem ILUSTRATIVA gerada por IA. Nao e foto do negocio. A pagina precisa declarar isso."
 }
