@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gabi Gonçalves</title>
+<meta name="description" content="Cadastrar-se no Instagram · Termos de Uso · Política de Privacidade — Taquaral, Campinas">
+
+<!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
+     tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
+     presenca real da pessoa - que nem sabe que isto existe. E uma previa para o
+     dono ver, nao uma publicacao. So sai daqui se ele contratar. -->
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<!-- Estas tags sao o que faz o WhatsApp mostrar um cartao com foto em vez de um
+     link pelado. Um cartao com a foto do proprio negocio e o maior antidoto
+     contra a mensagem parecer golpe. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gabi Gonçalves">
+<meta property="og:title" content="Gabi Gonçalves">
+<meta property="og:description" content="Cadastrar-se no Instagram · Termos de Uso · Política de Privacidade — Taquaral, Campinas">
+<meta property="og:url" content="https://myfirston.github.io/gabi-goncalves-designer-de-sobrancelhas-bem-/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b08968">
+
+<style>
+  :root{
+    --fundo:#faf7f4; --texto:#2b2723; --destaque:#b08968;
+    --sobre-destaque:#ffffff; --destaque-escuro:#84674e;
+    --suave:color-mix(in srgb, var(--destaque) 12%, var(--fundo));
+    --borda:color-mix(in srgb, var(--texto) 12%, transparent);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--fundo);color:var(--texto);
+       font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:ui-serif,Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15}
+
+  /* Movimento: entra suave e curto. Negocio de beleza nao combina com animacao
+     agressiva - e nada disso roda para quem pediu menos movimento no sistema.
+     O estado inicial invisivel so existe sob .js: se o script falhar no 4G, a
+     pagina aparece inteira em vez de ficar em branco. Sem esse portao, uma falha
+     de rede entregaria uma pagina vazia para a prospect. */
+  @media (prefers-reduced-motion:no-preference){
+    .js .rev{opacity:0;transform:translateY(14px);
+      transition:opacity .38s cubic-bezier(.22,.61,.36,1),transform .38s cubic-bezier(.22,.61,.36,1);
+      transition-delay:calc(var(--i,0) * 70ms)}
+    .js .rev.on{opacity:1;transform:none}
+  }
+
+  header{position:relative;min-height:78vh;display:grid;align-items:end;
+         padding:0 0 clamp(28px,7vw,64px);overflow:hidden}
+  header .bg{position:absolute;inset:0;background:var(--suave) center/cover no-repeat}
+  header .bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 100%)}
+  header .in{position:relative;color:#fff}
+  header h1{font-size:clamp(30px,8vw,58px);letter-spacing:-.01em;
+            text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  .lead{margin-top:10px;font-size:clamp(15px,4vw,19px);opacity:.94}
+  .sem-capa header .in{color:var(--texto)}
+
+  /* Brilho por baixo do botao principal. */
+  .cta{display:inline-flex;align-items:center;gap:9px;margin-top:22px;
+       padding:15px 26px;border-radius:999px;background:var(--destaque);
+       color:var(--sobre-destaque);text-decoration:none;font-weight:600;font-size:16px;
+       box-shadow:0 10px 30px -8px color-mix(in srgb,var(--destaque) 75%,transparent),
+                  0 2px 6px rgba(0,0,0,.14);
+       transition:transform .18s ease-out,box-shadow .18s ease-out}
+  .cta:hover,.cta:focus-visible{transform:translateY(-2px);
+       box-shadow:0 16px 40px -8px color-mix(in srgb,var(--destaque) 85%,transparent)}
+  .cta:active{transform:translateY(0)}
+
+  section{padding:clamp(44px,9vw,86px) 0}
+  .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+          color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
+  h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  .servicos{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
+  @media(min-width:900px){.servicos{grid-template-columns:repeat(3,minmax(260px,1fr))}}
+  .serv{display:flex;justify-content:space-between;align-items:center;gap:14px;
+        padding:20px 22px;background:var(--suave);border:1px solid var(--borda);
+        border-radius:15px;text-decoration:none;color:inherit;
+        transition:transform .18s ease-out,box-shadow .18s ease-out}
+  .serv:hover,.serv:focus-visible{transform:translateY(-2px);
+        box-shadow:0 12px 26px -12px color-mix(in srgb,var(--destaque) 70%,transparent)}
+  .serv b{font-weight:600;font-size:16.5px}
+  .serv span{flex:none;width:30px;height:30px;border-radius:50%;background:var(--destaque);
+        color:var(--sobre-destaque);display:grid;place-items:center;font-size:15px}
+
+  .prova{display:flex;flex-wrap:wrap;align-items:center;gap:18px;
+         padding:26px;background:var(--suave);border-radius:18px;border:1px solid var(--borda)}
+  .estrelas{font-size:26px;letter-spacing:3px;color:var(--destaque)}
+  .nota{font-size:38px;font-family:ui-serif,Georgia,serif;line-height:1}
+
+  .galeria{display:grid;gap:9px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:700px){.galeria{grid-template-columns:repeat(3,1fr)}}
+  .galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;display:block;
+               background:var(--suave)}
+
+  .info{display:grid;gap:26px}
+  @media(min-width:700px){.info{grid-template-columns:1fr 1fr}}
+  .hs{width:100%;border-collapse:collapse;font-size:15px}
+  .hs td{padding:7px 0;border-bottom:1px solid var(--borda)}
+  .hs td:last-child{text-align:right;color:color-mix(in srgb,var(--texto) 70%,transparent)}
+
+  footer{padding:36px 0 120px;border-top:1px solid var(--borda);
+         font-size:13.5px;color:color-mix(in srgb,var(--texto) 60%,transparent)}
+
+  /* Barra fixa no celular: o contato nunca fica longe do polegar. */
+  .barra{position:fixed;left:0;right:0;bottom:0;padding:11px 16px calc(11px + env(safe-area-inset-bottom));
+         background:color-mix(in srgb,var(--fundo) 92%,transparent);backdrop-filter:blur(10px);
+         border-top:1px solid var(--borda);z-index:9;
+         /* Some enquanto o hero esta na tela: ali o botao dele ja resolve, e dois
+            botoes iguais colados poluem a primeira dobra. */
+         transform:translateY(110%);transition:transform .28s ease-out;pointer-events:none}
+  .barra.on{transform:none;pointer-events:auto}
+  .js .barra{transform:translateY(110%)}
+  html:not(.js) .barra{transform:none;pointer-events:auto}
+  .barra .cta{margin:0;width:100%;justify-content:center}
+  @media(min-width:760px){.barra{display:none} footer{padding-bottom:36px}}
+</style>
+</head>
+<body class="sem-capa">
+
+<header>
+  <div class="bg"></div>
+  <div class="wrap in">
+    <h1 class="rev">Gabi Gonçalves</h1>
+    <p class="lead rev">Campinas · Salão de Beleza</p>
+    <a class="cta rev" href="https://wa.me/5519987157108" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</header>
+
+
+<section class="wrap">
+  <p class="rotulo rev">O que fazemos</p>
+  <h2 class="rev">Serviços</h2>
+  <div class="servicos">
+    
+    <a class="serv rev" href="https://wa.me/5519987157108?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Cadastrar-se%20no%20Instagram." target="_blank" rel="noopener">
+      <b>Cadastrar-se no Instagram</b><span aria-hidden="true">&rsaquo;</span>
+    </a>
+    <a class="serv rev" href="https://wa.me/5519987157108?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Termos%20de%20Uso." target="_blank" rel="noopener">
+      <b>Termos de Uso</b><span aria-hidden="true">&rsaquo;</span>
+    </a>
+    <a class="serv rev" href="https://wa.me/5519987157108?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Pol%C3%ADtica%20de%20Privacidade." target="_blank" rel="noopener">
+      <b>Política de Privacidade</b><span aria-hidden="true">&rsaquo;</span>
+    </a>
+  </div>
+  <p class="rotulo rev" style="margin-top:16px">Toque em um serviço para perguntar no WhatsApp</p>
+</section>
+
+
+<section class="wrap">
+  <div class="prova rev">
+    <div class="nota">5</div>
+    <div>
+      <div class="estrelas" aria-hidden="true">★★★★★</div>
+      <div>43 avaliações no Google</div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="wrap">
+  <div class="info">
+    <div class="rev"><p class="rotulo">Onde estamos</p><h2 style="font-size:20px">R. Otávio Machado, 350 - Taquaral, Campinas - SP, 13076-160</h2>
+      <p style="margin-top:10px"><a href="https://www.google.com/maps/place/Gabi+Gon%C3%A7alves+-+designer+de+sobrancelhas%2Fbem+estar+,+Campinas+-+SP/data=!4m7!3m6!1s0x94c8c5fa2df0ffff:0x86da8420e7958db5!8m2!3d-22.8818774!4d-47.0507474!16s%2Fg%2F11gcf5l6fh!19sChIJ___wLfrFyJQRtY2V5yCE2oY?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener" style="color:var(--destaque-escuro)">Ver no mapa</a></p></div>
+    <div class="rev"><p class="rotulo">Horários</p>
+      <table class="hs"><tr><td>domingo</td><td>Fechado</td></tr><tr><td>segunda</td><td>Fechado </td></tr><tr><td>terça</td><td>13:00–17:00</td></tr><tr><td>quarta</td><td>13:00–17:00</td></tr><tr><td>quinta</td><td>13:00–17:00</td></tr><tr><td>sexta</td><td>13:00–17:00</td></tr><tr><td>sábado</td><td>08:00–16:00</td></tr></table></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p>Gabi Gonçalves - designer de sobrancelhas/bem estar , Campinas - SP · R. Otávio Machado, 350 - Taquaral, Campinas - SP, 13076-160</p>
+  <p style="margin-top:6px">Prévia de site preparada pela MyFirstOn com informações públicas do Google.</p>
+</footer>
+
+<div class="barra"><a class="cta" href="https://wa.me/5519987157108" target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+
+<script>
+  // Reveal sem biblioteca. Avaliadas e descartadas: AOS (abandonado em 2018 e sem
+  // prefers-reduced-motion), Animate.css (1000ms de padrao), GSAP e Motion (45 KB
+  // para um fade), e CSS scroll-driven (e scrub: reverte ao subir a pagina).
+  // Isto aqui pesa ~400 bytes e faz exatamente o que o QA cobra.
+  document.documentElement.classList.add('js');
+  var alvos = document.querySelectorAll('.rev');
+  if (!window.IntersectionObserver) { alvos.forEach(function (e) { e.classList.add('on') }) }
+  else {
+    var obs = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        // unobserve: revela uma vez so. Re-animar a cada rolagem enjoa.
+        if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target) }
+      })
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
+    alvos.forEach(function (e) { obs.observe(e) });
+  }
+
+  // Barra de contato entra quando o hero sai da tela.
+  var barra = document.querySelector('.barra'), hero = document.querySelector('header');
+  if (barra && hero && window.IntersectionObserver) {
+    new IntersectionObserver(function (es) {
+      barra.classList.toggle('on', !es[0].isIntersecting)
+    }, { threshold: 0 }).observe(hero);
+  } else if (barra) { barra.classList.add('on') }
+</script>
+</body>
+</html>
