@@ -39,6 +39,10 @@
        font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
        -webkit-font-smoothing:antialiased}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  /* Respiro entre secoes: com menu e mais blocos, a pagina precisa de pausa
+     entre um e outro, senao "O QUE FAZEMOS" cola na linha de fatos de cima. */
+  section.wrap{padding-top:48px}
+  section.wrap + section.wrap{border-top:1px solid var(--borda);margin-top:44px}
   h1,h2,h3{font-family:ui-serif,Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15}
 
   /* Movimento: entra suave e curto. Negocio de beleza nao combina com animacao
@@ -52,6 +56,42 @@
       transition-delay:calc(var(--i,0) * 70ms)}
     .js .rev.on{opacity:1;transform:none}
   }
+
+  /* --- Menu ---------------------------------------------------------------
+     Feedback de quem revisou: "fica mais profissional se tiver menu com
+     separador: Sobre - Servicos - Especialista - Agendamentos". Tinha razao:
+     pagina sem navegacao le como landing de anuncio, nao como site. E tudo
+     ancora na mesma pagina, entao o menu nao promete nada que nao exista. */
+  .nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;
+       padding:12px 20px;background:color-mix(in srgb,var(--fundo) 88%,transparent);
+       backdrop-filter:blur(10px);border-bottom:1px solid var(--borda)}
+  .nav .marca{font-family:ui-serif,Georgia,serif;font-size:17px;text-decoration:none;
+       color:var(--texto);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nav ul{list-style:none;display:flex;gap:4px;margin-left:auto}
+  .nav li a{display:block;padding:8px 12px;border-radius:999px;text-decoration:none;
+       color:color-mix(in srgb,var(--texto) 78%,transparent);font-size:14px;
+       transition:background .18s ease,color .18s ease}
+  .nav li a:hover,.nav li a.ativo{background:var(--suave);color:var(--texto)}
+  .nav .abrir{margin-left:auto;display:none;width:42px;height:42px;border:1px solid var(--borda);
+       border-radius:10px;background:transparent;cursor:pointer;place-items:center}
+  .nav .abrir span{display:block;width:18px;height:2px;background:var(--texto);
+       box-shadow:0 -6px 0 var(--texto),0 6px 0 var(--texto)}
+  @media(max-width:700px){
+    .nav ul{position:fixed;inset:0;top:0;z-index:30;flex-direction:column;justify-content:center;
+       gap:6px;margin:0;padding:24px;background:var(--fundo);transform:translateX(100%);
+       transition:transform .28s cubic-bezier(.22,.61,.36,1)}
+    .nav ul.on{transform:none}
+    .nav li a{font-family:ui-serif,Georgia,serif;font-size:26px;padding:12px 16px;text-align:center}
+    .nav .abrir{display:grid}
+    .nav .abrir.on{position:fixed;top:12px;right:20px;z-index:31}
+    .nav .abrir.on span{background:transparent;box-shadow:none;position:relative}
+    .nav .abrir.on span::before,.nav .abrir.on span::after{content:"";position:absolute;inset:0;
+       background:var(--texto);transform:rotate(45deg)}
+    .nav .abrir.on span::after{transform:rotate(-45deg)}
+  }
+  @media(prefers-reduced-motion:reduce){.nav ul{transition:none}}
+  /* As secoes ancoradas param abaixo do menu fixo, nao escondidas atras dele. */
+  section[id],[id="agendar"]{scroll-margin-top:64px}
 
   header{position:relative;min-height:78vh;display:grid;align-items:end;
          padding:0 0 clamp(28px,7vw,64px);overflow:hidden}
@@ -122,6 +162,46 @@
   .estrelas{font-size:26px;letter-spacing:3px;color:var(--destaque)}
   .nota{font-size:38px;font-family:ui-serif,Georgia,serif;line-height:1}
 
+  /* --- Sobre / fatos / bio ------------------------------------------------ */
+  .bio{margin:14px 0 0;padding:16px 20px;border-left:3px solid var(--destaque);
+       background:var(--suave);border-radius:0 12px 12px 0;font-size:17px;line-height:1.6;
+       font-family:ui-serif,Georgia,serif;font-style:italic}
+  .fatos{margin-top:12px;color:color-mix(in srgb,var(--texto) 70%,transparent);font-size:15px}
+
+  /* --- Servicos em sanfona -----------------------------------------------
+     Feedback: "clica no servico e nao abre conteudo, abre o WhatsApp". Agora o
+     card ABRE e explica a tecnica; o WhatsApp vira o botao de dentro. */
+  details.serv{display:block;padding:0;cursor:pointer}
+  details.serv summary{display:flex;align-items:center;justify-content:space-between;gap:12px;
+       padding:16px 18px;list-style:none;font-size:17px}
+  details.serv summary::-webkit-details-marker{display:none}
+  details.serv summary span{width:34px;height:34px;flex:none;border-radius:50%;display:grid;
+       place-items:center;background:var(--destaque);color:var(--sobre-destaque);font-size:20px;
+       transition:transform .28s cubic-bezier(.22,.61,.36,1)}
+  details.serv[open] summary span{transform:rotate(90deg)}
+  details.serv .corpo{padding:0 18px 18px;cursor:auto}
+  .oquee{font-size:15px;line-height:1.6;color:color-mix(in srgb,var(--texto) 82%,transparent)}
+  .oquee .rotulo{display:block;margin:0 0 4px}
+  .cta.mini{padding:11px 18px;font-size:14px;margin-top:12px}
+  @media(prefers-reduced-motion:no-preference){
+    details.serv .corpo{animation:abre .26s ease-out}
+    @keyframes abre{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+  }
+
+  /* --- Avaliacoes reais --------------------------------------------------- */
+  .prova a{color:var(--destaque-escuro)}
+  .depo{display:grid;gap:12px;margin-top:20px}
+  @media(min-width:700px){.depo{grid-template-columns:1fr 1fr}}
+  .depo figure{margin:0;padding:18px 20px;background:#fff;border:1px solid var(--borda);
+       border-radius:14px}
+  .depo blockquote{margin:0;font-size:15.5px;line-height:1.6}
+  .depo blockquote::before{content:"“";color:var(--destaque);font-family:ui-serif,Georgia,serif;
+       font-size:28px;line-height:0;margin-right:2px;vertical-align:-8px}
+  .depo figcaption{margin-top:10px;font-size:13px;color:color-mix(in srgb,var(--texto) 62%,transparent)}
+
+  /* Quem atende sem retrato: so o texto, sem buraco onde a foto iria. */
+  .sobre.sem-foto{grid-template-columns:1fr}
+
   .galeria{display:grid;gap:9px;grid-template-columns:repeat(2,1fr)}
   @media(min-width:700px){.galeria{grid-template-columns:repeat(3,1fr)}}
   /* Com 4 fotos, 3 colunas deixariam uma sozinha na segunda fileira. */
@@ -174,7 +254,19 @@
 </head>
 <body class="">
 
-<header>
+<nav class="nav" aria-label="Seções">
+  <a class="marca" href="#topo">Ladivier</a>
+  <button class="abrir" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  <ul id="menu">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    
+    <li><a href="#especialista">Especialista</a></li>
+    <li><a href="#agendar">Agendar</a></li>
+  </ul>
+</nav>
+
+<header id="topo">
   <div class="bg gerada" style="background-image:url('fotos/ilustrativas/ambiente.png')"></div>
   <span class="ilustra">Imagem ilustrativa</span>
   <div class="wrap in">
@@ -184,56 +276,109 @@
   </div>
 </header>
 
+<section class="wrap" id="sobre">
+  <p class="rotulo rev">Sobre</p>
+  <h2 class="rev">Ladivier</h2>
+  <blockquote class="bio rev">•Realçando sua beleza sem perder sua essência• Há 9 anos transformando olhares Sobrancelhas | Lábios | Delineado CAMPINAS/ SP ⬇️Agendamentos</blockquote>
+  <p class="fatos rev">Salão de sobrancelhas · Sl 81, Campinas · 4,9 no Google com 130 avaliações</p>
+</section>
 
-<section class="wrap">
+
+<section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
   <div class="servicos">
     
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20mais." target="_blank" rel="noopener">
-      <b>mais</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Fios." target="_blank" rel="noopener">
-      <b>• Fios</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Fio%20a%20Fio." target="_blank" rel="noopener">
-      <b>• Fio a Fio</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20H%C3%ADbrida." target="_blank" rel="noopener">
-      <b>• Híbrida</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Shadow." target="_blank" rel="noopener">
-      <b>• Shadow</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Cicatrizadas." target="_blank" rel="noopener">
-      <b>• Cicatrizadas</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20L%C3%A1bios." target="_blank" rel="noopener">
-      <b>• Lábios</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
-    <a class="serv rev" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Procedimentos." target="_blank" rel="noopener">
-      <b>• Procedimentos</b><span aria-hidden="true">&rsaquo;</span>
-    </a>
+    <details class="serv rev" style="--i:0">
+      <summary><b>mais</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20mais." target="_blank" rel="noopener">Perguntar sobre mais</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:1">
+      <summary><b>• Fios</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Fios." target="_blank" rel="noopener">Perguntar sobre • Fios</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:2">
+      <summary><b>• Fio a Fio</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Fio%20a%20Fio." target="_blank" rel="noopener">Perguntar sobre • Fio a Fio</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:0">
+      <summary><b>• Híbrida</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20H%C3%ADbrida." target="_blank" rel="noopener">Perguntar sobre • Híbrida</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:1">
+      <summary><b>• Shadow</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Shadow." target="_blank" rel="noopener">Perguntar sobre • Shadow</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:2">
+      <summary><b>• Cicatrizadas</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Cicatrizadas." target="_blank" rel="noopener">Perguntar sobre • Cicatrizadas</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:0">
+      <summary><b>• Lábios</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente dos lábios para realçar o contorno e uniformizar a cor.</p>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20L%C3%A1bios." target="_blank" rel="noopener">Perguntar sobre • Lábios</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:1">
+      <summary><b>• Procedimentos</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Procedimentos." target="_blank" rel="noopener">Perguntar sobre • Procedimentos</a>
+      </div>
+    </details>
   </div>
-  <p class="rotulo rev" style="margin-top:16px">Toque em um serviço para perguntar no WhatsApp</p>
 </section>
 
-
-
-
-<section class="wrap">
-  <div class="prova rev">
-    <div class="nota">4,9</div>
-    <div>
-      <div class="estrelas" aria-hidden="true">★★★★★</div>
-      <div>130 avaliações no Google</div>
+<section class="wrap" id="especialista">
+  <div class="sobre sem-foto">
+    
+    <div class="rev">
+      <p class="rotulo">Quem atende</p>
+      <h2>Ladivier</h2>
+      <p class="fatos">Salão de sobrancelhas em Sl 81</p>
+      
+      <a class="cta" href="https://wa.me/5519971677311" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </div>
 </section>
 
 
+<section class="wrap" id="avaliacoes">
+  <div class="prova rev">
+    <div class="nota">4,9</div>
+    <div>
+      <div class="estrelas" aria-hidden="true">★★★★★</div>
+      <div>130 avaliações no Google · <a href="https://www.google.com/maps/place/LADIVIER+-+Beauty+Studio+-+Micropigmenta%C3%A7%C3%A3o+de+Sobrancelhas+Em+Campinas/data=!4m7!3m6!1s0x94c8c928335152ad:0xb55575a036765270!8m2!3d-22.8974352!4d-47.0677682!16s%2Fg%2F11qn5pptpf!19sChIJrVJRMyjJyJQRcFJ2NqB1VbU?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener">ver todas</a></div>
+    </div>
+  </div>
+  
+</section>
 
-<section class="wrap">
+
+
+<section class="wrap" id="agendar">
+  <p class="rotulo rev">Agendar</p>
+  <h2 class="rev">Horários e endereço</h2>
+  <p class="rev" style="margin:6px 0 22px"><a class="cta" href="https://wa.me/5519971677311" target="_blank" rel="noopener">Agendar pelo WhatsApp</a></p>
   <div class="info">
     <div class="rev"><p class="rotulo">Onde estamos</p><h2 style="font-size:20px">R. Dr. Antônio Álvares Lôbo, 660 - Sl 81 - Botafogo, Campinas - SP, 13020-110</h2>
       <p style="margin-top:10px"><a href="https://www.google.com/maps/place/LADIVIER+-+Beauty+Studio+-+Micropigmenta%C3%A7%C3%A3o+de+Sobrancelhas+Em+Campinas/data=!4m7!3m6!1s0x94c8c928335152ad:0xb55575a036765270!8m2!3d-22.8974352!4d-47.0677682!16s%2Fg%2F11qn5pptpf!19sChIJrVJRMyjJyJQRcFJ2NqB1VbU?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener" style="color:var(--destaque-escuro)">Ver no mapa</a></p></div>
@@ -262,6 +407,35 @@
   // para um fade), e CSS scroll-driven (e scrub: reverte ao subir a pagina).
   // Isto aqui pesa ~400 bytes e faz exatamente o que o QA cobra.
   document.documentElement.classList.add('js');
+
+  /* Menu: abre e fecha no celular, fecha ao escolher uma secao, e marca a secao
+     que esta na tela. E tudo ancora, entao nao ha rota nem carregamento. */
+  var abrir = document.querySelector('.nav .abrir'), menu = document.getElementById('menu');
+  if (abrir && menu) {
+    abrir.addEventListener('click', function () {
+      var on = menu.classList.toggle('on');
+      abrir.classList.toggle('on', on);
+      abrir.setAttribute('aria-expanded', on ? 'true' : 'false');
+      document.body.style.overflow = on ? 'hidden' : '';
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { menu.classList.remove('on'); abrir.classList.remove('on'); document.body.style.overflow = ''; }
+    });
+    var links = [].slice.call(menu.querySelectorAll('a[href^="#"]'));
+    if (window.IntersectionObserver && links.length) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          links.forEach(function (l) { l.classList.toggle('ativo', l.getAttribute('href') === '#' + en.target.id); });
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' }).observe && links.forEach(function (l) {
+        var sec = document.querySelector(l.getAttribute('href'));
+        if (sec) new IntersectionObserver(function (es) {
+          es.forEach(function (en) { if (en.isIntersecting) links.forEach(function (x) { x.classList.toggle('ativo', x === l); }); });
+        }, { rootMargin: '-40% 0px -55% 0px' }).observe(sec);
+      });
+    }
+  }
   var alvos = document.querySelectorAll('.rev');
   if (!window.IntersectionObserver) { alvos.forEach(function (e) { e.classList.add('on') }) }
   else {
