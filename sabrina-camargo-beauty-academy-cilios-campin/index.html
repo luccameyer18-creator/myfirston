@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sabrina Camargo Beauty &amp; Academy</title>
-<meta name="description" content="mais · clientes · yvenon ex. · sobrancelhas — Jardim Nova Europa, Campinas">
+<meta name="description" content="Sobrancelhas · Cílios · Lash Lifting — Jardim Nova Europa, Campinas">
 
 <!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
      tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sabrina Camargo Beauty &amp; Academy">
 <meta property="og:title" content="Sabrina Camargo Beauty &amp; Academy">
-<meta property="og:description" content="mais · clientes · yvenon ex. · sobrancelhas — Jardim Nova Europa, Campinas">
+<meta property="og:description" content="Sobrancelhas · Cílios · Lash Lifting — Jardim Nova Europa, Campinas">
 <meta property="og:url" content="https://myfirston.github.io/sabrina-camargo-beauty-academy-cilios-campin/">
 <meta property="og:image" content="fotos/ilustrativas/ambiente.png">
 <meta property="og:image:width" content="1200">
@@ -139,6 +139,14 @@
   .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
           color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
   h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  /* A imagem que abre a secao de servicos. No celular ela e uma faixa baixa
+     (16:6) para nao empurrar a lista para fora da tela; no desktop cresce um
+     pouco. object-fit cobre porque a gerada sai 16:9 e o recorte e vertical. */
+  .capa-serv{position:relative;margin-bottom:26px;border-radius:18px;overflow:hidden;
+             background:var(--suave)}
+  .capa-serv img{display:block;width:100%;height:clamp(150px,34vw,260px);
+                 object-fit:cover;object-position:center}
 
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
@@ -350,7 +358,7 @@
   </div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>mais <i>•</i> clientes <i>•</i> yvenon ex. <i>•</i> sobrancelhas <i>•</i> cílios <i>•</i> studio <i>•</i> lash lifting <i>•</i> durabilidade <i>•</i></span><span>mais <i>•</i> clientes <i>•</i> yvenon ex. <i>•</i> sobrancelhas <i>•</i> cílios <i>•</i> studio <i>•</i> lash lifting <i>•</i> durabilidade <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Sobrancelhas <i>•</i> Cílios <i>•</i> Lash Lifting <i>•</i></span><span>Sobrancelhas <i>•</i> Cílios <i>•</i> Lash Lifting <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -363,62 +371,29 @@
 <section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
+  
+  
   <div class="servicos">
     
     <details class="serv rev" style="--i:0">
-      <summary><b>mais</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20mais." target="_blank" rel="noopener">Perguntar sobre mais</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:1">
-      <summary><b>clientes</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20clientes." target="_blank" rel="noopener">Perguntar sobre clientes</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:2">
-      <summary><b>yvenon ex.</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20yvenon%20ex.." target="_blank" rel="noopener">Perguntar sobre yvenon ex.</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:0">
-      <summary><b>sobrancelhas</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Sobrancelhas</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Desenho da sobrancelha de acordo com o formato do rosto, com medição e remoção dos fios fora do traçado, com pinça, linha ou cera.</p>
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20sobrancelhas." target="_blank" rel="noopener">Perguntar sobre sobrancelhas</a>
+        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Sobrancelhas." target="_blank" rel="noopener">Perguntar sobre Sobrancelhas</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>cílios</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Cílios</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Extensão de cílios: fios sintéticos aplicados um a um ou em leques sobre os cílios naturais, para mais comprimento e volume.</p>
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20c%C3%ADlios." target="_blank" rel="noopener">Perguntar sobre cílios</a>
+        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20C%C3%ADlios." target="_blank" rel="noopener">Perguntar sobre Cílios</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>studio</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20studio." target="_blank" rel="noopener">Perguntar sobre studio</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:0">
-      <summary><b>lash lifting</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Lash Lifting</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Extensão de cílios: fios sintéticos aplicados um a um ou em leques sobre os cílios naturais, para mais comprimento e volume.</p>
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20lash%20lifting." target="_blank" rel="noopener">Perguntar sobre lash lifting</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:1">
-      <summary><b>durabilidade</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20durabilidade." target="_blank" rel="noopener">Perguntar sobre durabilidade</a>
+        <a class="cta mini" href="https://wa.me/5519995130806?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Lash%20Lifting." target="_blank" rel="noopener">Perguntar sobre Lash Lifting</a>
       </div>
     </details>
   </div>
@@ -470,7 +445,7 @@
   <div class="passo">
     <p class="rot"><i>1</i> Escolha o serviço</p>
     <div class="ops" id="ag-servicos">
-      <button class="op" type="button" data-v="mais" aria-pressed="false">mais</button><button class="op" type="button" data-v="clientes" aria-pressed="false">clientes</button><button class="op" type="button" data-v="yvenon ex." aria-pressed="false">yvenon ex.</button><button class="op" type="button" data-v="sobrancelhas" aria-pressed="false">sobrancelhas</button><button class="op" type="button" data-v="cílios" aria-pressed="false">cílios</button><button class="op" type="button" data-v="studio" aria-pressed="false">studio</button><button class="op" type="button" data-v="lash lifting" aria-pressed="false">lash lifting</button><button class="op" type="button" data-v="durabilidade" aria-pressed="false">durabilidade</button>
+      <button class="op" type="button" data-v="Sobrancelhas" aria-pressed="false">Sobrancelhas</button><button class="op" type="button" data-v="Cílios" aria-pressed="false">Cílios</button><button class="op" type="button" data-v="Lash Lifting" aria-pressed="false">Lash Lifting</button>
       <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
     </div>
   </div>

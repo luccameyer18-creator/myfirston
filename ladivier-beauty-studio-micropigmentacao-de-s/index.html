@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ladivier</title>
-<meta name="description" content="mais · • Fios · • Fio a Fio · • Híbrida — Sl 81">
+<meta name="description" content="Fios · Fio a Fio · Híbrida · Shadow — Sl 81">
 
 <!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
      tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ladivier">
 <meta property="og:title" content="Ladivier">
-<meta property="og:description" content="mais · • Fios · • Fio a Fio · • Híbrida — Sl 81">
+<meta property="og:description" content="Fios · Fio a Fio · Híbrida · Shadow — Sl 81">
 <meta property="og:url" content="https://myfirston.github.io/ladivier-beauty-studio-micropigmentacao-de-s/">
 <meta property="og:image" content="fotos/ilustrativas/ambiente.png">
 <meta property="og:image:width" content="1200">
@@ -139,6 +139,14 @@
   .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
           color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
   h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  /* A imagem que abre a secao de servicos. No celular ela e uma faixa baixa
+     (16:6) para nao empurrar a lista para fora da tela; no desktop cresce um
+     pouco. object-fit cobre porque a gerada sai 16:9 e o recorte e vertical. */
+  .capa-serv{position:relative;margin-bottom:26px;border-radius:18px;overflow:hidden;
+             background:var(--suave)}
+  .capa-serv img{display:block;width:100%;height:clamp(150px,34vw,260px);
+                 object-fit:cover;object-position:center}
 
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
@@ -350,7 +358,7 @@
   </div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>mais <i>•</i> • Fios <i>•</i> • Fio a Fio <i>•</i> • Híbrida <i>•</i> • Shadow <i>•</i> • Cicatrizadas <i>•</i> • Lábios <i>•</i> • Procedimentos <i>•</i></span><span>mais <i>•</i> • Fios <i>•</i> • Fio a Fio <i>•</i> • Híbrida <i>•</i> • Shadow <i>•</i> • Cicatrizadas <i>•</i> • Lábios <i>•</i> • Procedimentos <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Fios <i>•</i> Fio a Fio <i>•</i> Híbrida <i>•</i> Shadow <i>•</i> Cicatrizadas <i>•</i> Lábios <i>•</i></span><span>Fios <i>•</i> Fio a Fio <i>•</i> Híbrida <i>•</i> Shadow <i>•</i> Cicatrizadas <i>•</i> Lábios <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -363,62 +371,50 @@
 <section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
+  
+  
   <div class="servicos">
     
     <details class="serv rev" style="--i:0">
-      <summary><b>mais</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Fios</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20mais." target="_blank" rel="noopener">Perguntar sobre mais</a>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Fios." target="_blank" rel="noopener">Perguntar sobre Fios</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>• Fios</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Fio a Fio</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Fios." target="_blank" rel="noopener">Perguntar sobre • Fios</a>
+        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Fio%20a%20Fio." target="_blank" rel="noopener">Perguntar sobre Fio a Fio</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>• Fio a Fio</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Híbrida</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
-        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Fio%20a%20Fio." target="_blank" rel="noopener">Perguntar sobre • Fio a Fio</a>
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20H%C3%ADbrida." target="_blank" rel="noopener">Perguntar sobre Híbrida</a>
       </div>
     </details>
     <details class="serv rev" style="--i:0">
-      <summary><b>• Híbrida</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Shadow</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20H%C3%ADbrida." target="_blank" rel="noopener">Perguntar sobre • Híbrida</a>
+        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Shadow." target="_blank" rel="noopener">Perguntar sobre Shadow</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>• Shadow</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Cicatrizadas</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
-        <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Shadow." target="_blank" rel="noopener">Perguntar sobre • Shadow</a>
+        
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Cicatrizadas." target="_blank" rel="noopener">Perguntar sobre Cicatrizadas</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>• Cicatrizadas</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Cicatrizadas." target="_blank" rel="noopener">Perguntar sobre • Cicatrizadas</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:0">
-      <summary><b>• Lábios</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Lábios</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente dos lábios para realçar o contorno e uniformizar a cor.</p>
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20L%C3%A1bios." target="_blank" rel="noopener">Perguntar sobre • Lábios</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:1">
-      <summary><b>• Procedimentos</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2%20Procedimentos." target="_blank" rel="noopener">Perguntar sobre • Procedimentos</a>
+        <a class="cta mini" href="https://wa.me/5519971677311?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20L%C3%A1bios." target="_blank" rel="noopener">Perguntar sobre Lábios</a>
       </div>
     </details>
   </div>
@@ -430,7 +426,7 @@
     <div class="rev">
       <p class="rotulo">Quem atende</p>
       <h2>Ladivier</h2>
-      <p class="fatos">Salão de sobrancelhas em Sl 81</p>
+      <p class="fatos">Salão de sobrancelhas em Botafogo</p>
       
       <a class="cta" href="https://wa.me/5519971677311" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
@@ -463,7 +459,7 @@
   <div class="passo">
     <p class="rot"><i>1</i> Escolha o serviço</p>
     <div class="ops" id="ag-servicos">
-      <button class="op" type="button" data-v="mais" aria-pressed="false">mais</button><button class="op" type="button" data-v="• Fios" aria-pressed="false">• Fios</button><button class="op" type="button" data-v="• Fio a Fio" aria-pressed="false">• Fio a Fio</button><button class="op" type="button" data-v="• Híbrida" aria-pressed="false">• Híbrida</button><button class="op" type="button" data-v="• Shadow" aria-pressed="false">• Shadow</button><button class="op" type="button" data-v="• Cicatrizadas" aria-pressed="false">• Cicatrizadas</button><button class="op" type="button" data-v="• Lábios" aria-pressed="false">• Lábios</button><button class="op" type="button" data-v="• Procedimentos" aria-pressed="false">• Procedimentos</button>
+      <button class="op" type="button" data-v="Fios" aria-pressed="false">Fios</button><button class="op" type="button" data-v="Fio a Fio" aria-pressed="false">Fio a Fio</button><button class="op" type="button" data-v="Híbrida" aria-pressed="false">Híbrida</button><button class="op" type="button" data-v="Shadow" aria-pressed="false">Shadow</button><button class="op" type="button" data-v="Cicatrizadas" aria-pressed="false">Cicatrizadas</button><button class="op" type="button" data-v="Lábios" aria-pressed="false">Lábios</button>
       <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
     </div>
   </div>

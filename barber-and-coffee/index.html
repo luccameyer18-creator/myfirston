@@ -159,6 +159,15 @@ section{padding:76px 0;border-top:1px solid var(--filete)}
 section h2{font-size:clamp(30px,7vw,52px);margin:10px 0 34px}
 
 /* --- servicos: cardapio, nao card de preco --- */
+/* A faixa que abre o cardapio. Escura como o resto da pagina: um degrade por
+   cima costura a base da imagem no fundo, senao a borda reta da foto corta a
+   secao em duas no meio de uma pagina que nao tem nenhuma outra borda reta. */
+.capa-serv{position:relative;margin:0 0 30px;border-radius:4px;overflow:hidden}
+.capa-serv img{display:block;width:100%;height:clamp(160px,36vw,280px);
+  object-fit:cover;object-position:center;filter:saturate(.92)}
+.capa-serv::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to bottom,transparent 55%,var(--ink))}
+
 .menu{border-top:1px solid var(--filete)}
 .item{display:flex;align-items:baseline;gap:14px;padding:20px 2px;
   border-bottom:1px solid var(--filete);text-decoration:none;color:inherit;
@@ -337,7 +346,7 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
     <button class="abrir" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
     <ul id="menu">
       <li><a href="#sobre">Sobre</a></li>
-      
+      <li><a href="#servicos">Serviços</a></li>
       <li><a href="#fotos">Fotos</a></li>
       <li><a href="#especialista">Especialista</a></li>
       <li><a href="#onde">Agendar</a></li>
@@ -361,7 +370,7 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
   </div>
 </div>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>Barbearia <i>•</i> Barber and Coffee <i>•</i> Campinas <i>•</i></span><span>Barbearia <i>•</i> Barber and Coffee <i>•</i> Campinas <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Corte Adulto <i>•</i> Corte Infantil <i>•</i></span><span>Corte Adulto <i>•</i> Corte Infantil <i>•</i></span></div></div>
 
 <div class="nota"><div class="w">
   <b>4,8</b>
@@ -377,7 +386,29 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
   
 </div></section>
 
-
+<section id="servicos"><div class="w">
+  <span class="olho">Serviços</span>
+  <h2 class="rev">O que fazemos</h2>
+  
+  <div class="capa-serv rev">
+    <img src="fotos/ilustrativas/procedimento.png" alt="Ambiente de atendimento" loading="lazy" decoding="async">
+  </div>
+  <div class="menu">
+    <details class="item rev" style="transition-delay:0ms">
+        <summary><span class="n">Corte Adulto</span><span class="fio"></span><span class="ir">Ver +</span></summary>
+        <div class="corpo">
+          <p class="oquee"><span class="olho">O que é</span>Corte de cabelo masculino, do clássico ao degradê, com acabamento na máquina, tesoura ou navalha.</p>
+          <a class="btn mini" href="https://wa.me/5519995149786?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Barber%20and%20Coffee%20e%20queria%20agendar%20Corte%20Adulto." target="_blank" rel="noopener">Agendar Corte Adulto</a>
+        </div>
+      </details><details class="item rev" style="transition-delay:60ms">
+        <summary><span class="n">Corte Infantil</span><span class="fio"></span><span class="ir">Ver +</span></summary>
+        <div class="corpo">
+          <p class="oquee"><span class="olho">O que é</span>Corte de cabelo masculino, do clássico ao degradê, com acabamento na máquina, tesoura ou navalha.</p>
+          <a class="btn mini" href="https://wa.me/5519995149786?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Barber%20and%20Coffee%20e%20queria%20agendar%20Corte%20Infantil." target="_blank" rel="noopener">Agendar Corte Infantil</a>
+        </div>
+      </details>
+  </div>
+</div></section>
 
 <section id="fotos"><div class="w">
   
@@ -395,7 +426,7 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
   <div>
     <span class="olho">Quem atende</span>
     <h2 class="rev">Barber and Coffee</h2>
-    <p class="fatos rev">Barbearia em Mansões Santo Antônio</p>
+    
     <p class="rev" style="margin-top:10px"><a href="https://www.instagram.com/barberecoffee/" target="_blank" rel="noopener" style="color:var(--accent)">@barberecoffee no Instagram</a></p>
   </div>
 </div></section>
@@ -409,14 +440,21 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
      data-wa="https://wa.me/5519995149786"
      data-nome="Barber and Coffee">
   
+  <div class="passo">
+    <p class="rot"><i>1</i> Escolha o serviço</p>
+    <div class="ops" id="ag-servicos">
+      <button class="op" type="button" data-v="Corte Adulto" aria-pressed="false">Corte Adulto</button><button class="op" type="button" data-v="Corte Infantil" aria-pressed="false">Corte Infantil</button>
+      <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
+    </div>
+  </div>
 
   <div class="passo">
-    <p class="rot"><i>1</i> Escolha o dia</p>
+    <p class="rot"><i>2</i> Escolha o dia</p>
     <div class="ops dias" id="ag-dias"></div>
   </div>
 
   <div class="passo" id="ag-passo-hora" hidden>
-    <p class="rot"><i>2</i> Horário de preferência</p>
+    <p class="rot"><i>3</i> Horário de preferência</p>
     <div class="horas ops" id="ag-horas"></div>
   </div>
 

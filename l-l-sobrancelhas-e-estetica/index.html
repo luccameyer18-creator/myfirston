@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>L&amp;L Sobrancelhas e Estética</title>
-<meta name="description" content="MICROPIGMENTAÇÃO Campinas · SAINTLIPS ♡ · SAINTBROW · SaintRevit — 7º andar, Sala 706">
+<meta name="description" content="Micropigmentação · Saintlips · Saintbrow · Saintrevit — 7º andar, Sala 706">
 
 <!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
      tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="L&amp;L Sobrancelhas e Estética">
 <meta property="og:title" content="L&amp;L Sobrancelhas e Estética">
-<meta property="og:description" content="MICROPIGMENTAÇÃO Campinas · SAINTLIPS ♡ · SAINTBROW · SaintRevit — 7º andar, Sala 706">
+<meta property="og:description" content="Micropigmentação · Saintlips · Saintbrow · Saintrevit — 7º andar, Sala 706">
 <meta property="og:url" content="https://myfirston.github.io/l-l-sobrancelhas-e-estetica/">
 <meta property="og:image" content="fotos/ilustrativas/ambiente.png">
 <meta property="og:image:width" content="1200">
@@ -139,6 +139,14 @@
   .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
           color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
   h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  /* A imagem que abre a secao de servicos. No celular ela e uma faixa baixa
+     (16:6) para nao empurrar a lista para fora da tela; no desktop cresce um
+     pouco. object-fit cobre porque a gerada sai 16:9 e o recorte e vertical. */
+  .capa-serv{position:relative;margin-bottom:26px;border-radius:18px;overflow:hidden;
+             background:var(--suave)}
+  .capa-serv img{display:block;width:100%;height:clamp(150px,34vw,260px);
+                 object-fit:cover;object-position:center}
 
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
@@ -350,7 +358,7 @@
   </div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>MICROPIGMENTAÇÃO Campinas <i>•</i> SAINTLIPS ♡ <i>•</i> SAINTBROW <i>•</i> SaintRevit <i>•</i> MANCHA SENIL <i>•</i> SAINTGLOSS <i>•</i> CLEARLIPS ♡ <i>•</i> OLHOS ♡ <i>•</i></span><span>MICROPIGMENTAÇÃO Campinas <i>•</i> SAINTLIPS ♡ <i>•</i> SAINTBROW <i>•</i> SaintRevit <i>•</i> MANCHA SENIL <i>•</i> SAINTGLOSS <i>•</i> CLEARLIPS ♡ <i>•</i> OLHOS ♡ <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Micropigmentação <i>•</i> Saintlips <i>•</i> Saintbrow <i>•</i> Saintrevit <i>•</i> Mancha Senil <i>•</i> Saintgloss <i>•</i> Clearlips <i>•</i> Olhos <i>•</i></span><span>Micropigmentação <i>•</i> Saintlips <i>•</i> Saintbrow <i>•</i> Saintrevit <i>•</i> Mancha Senil <i>•</i> Saintgloss <i>•</i> Clearlips <i>•</i> Olhos <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -363,62 +371,64 @@
 <section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
+  
+  
   <div class="servicos">
     
     <details class="serv rev" style="--i:0">
-      <summary><b>MICROPIGMENTAÇÃO Campinas</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Micropigmentação</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente da sobrancelha, desenhando fio a fio ou com efeito esfumado. O resultado dura meses e vai clareando aos poucos.</p>
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20MICROPIGMENTA%C3%87%C3%83O%20Campinas." target="_blank" rel="noopener">Perguntar sobre MICROPIGMENTAÇÃO Campinas</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Micropigmenta%C3%A7%C3%A3o." target="_blank" rel="noopener">Perguntar sobre Micropigmentação</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>SAINTLIPS ♡</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Saintlips</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente dos lábios para realçar o contorno e uniformizar a cor.</p>
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20SAINTLIPS%20%E2%99%A1." target="_blank" rel="noopener">Perguntar sobre SAINTLIPS ♡</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Saintlips." target="_blank" rel="noopener">Perguntar sobre Saintlips</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>SAINTBROW</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Saintbrow</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20SAINTBROW." target="_blank" rel="noopener">Perguntar sobre SAINTBROW</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Saintbrow." target="_blank" rel="noopener">Perguntar sobre Saintbrow</a>
       </div>
     </details>
     <details class="serv rev" style="--i:0">
-      <summary><b>SaintRevit</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Saintrevit</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20SaintRevit." target="_blank" rel="noopener">Perguntar sobre SaintRevit</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Saintrevit." target="_blank" rel="noopener">Perguntar sobre Saintrevit</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>MANCHA SENIL</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Mancha Senil</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20MANCHA%20SENIL." target="_blank" rel="noopener">Perguntar sobre MANCHA SENIL</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Mancha%20Senil." target="_blank" rel="noopener">Perguntar sobre Mancha Senil</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>SAINTGLOSS</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Saintgloss</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20SAINTGLOSS." target="_blank" rel="noopener">Perguntar sobre SAINTGLOSS</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Saintgloss." target="_blank" rel="noopener">Perguntar sobre Saintgloss</a>
       </div>
     </details>
     <details class="serv rev" style="--i:0">
-      <summary><b>CLEARLIPS ♡</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Clearlips</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente dos lábios para realçar o contorno e uniformizar a cor.</p>
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20CLEARLIPS%20%E2%99%A1." target="_blank" rel="noopener">Perguntar sobre CLEARLIPS ♡</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Clearlips." target="_blank" rel="noopener">Perguntar sobre Clearlips</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>OLHOS ♡</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Olhos</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20OLHOS%20%E2%99%A1." target="_blank" rel="noopener">Perguntar sobre OLHOS ♡</a>
+        <a class="cta mini" href="https://wa.me/5519999876106?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Olhos." target="_blank" rel="noopener">Perguntar sobre Olhos</a>
       </div>
     </details>
   </div>
@@ -470,7 +480,7 @@
   <div class="passo">
     <p class="rot"><i>1</i> Escolha o serviço</p>
     <div class="ops" id="ag-servicos">
-      <button class="op" type="button" data-v="MICROPIGMENTAÇÃO Campinas" aria-pressed="false">MICROPIGMENTAÇÃO Campinas</button><button class="op" type="button" data-v="SAINTLIPS ♡" aria-pressed="false">SAINTLIPS ♡</button><button class="op" type="button" data-v="SAINTBROW" aria-pressed="false">SAINTBROW</button><button class="op" type="button" data-v="SaintRevit" aria-pressed="false">SaintRevit</button><button class="op" type="button" data-v="MANCHA SENIL" aria-pressed="false">MANCHA SENIL</button><button class="op" type="button" data-v="SAINTGLOSS" aria-pressed="false">SAINTGLOSS</button><button class="op" type="button" data-v="CLEARLIPS ♡" aria-pressed="false">CLEARLIPS ♡</button><button class="op" type="button" data-v="OLHOS ♡" aria-pressed="false">OLHOS ♡</button>
+      <button class="op" type="button" data-v="Micropigmentação" aria-pressed="false">Micropigmentação</button><button class="op" type="button" data-v="Saintlips" aria-pressed="false">Saintlips</button><button class="op" type="button" data-v="Saintbrow" aria-pressed="false">Saintbrow</button><button class="op" type="button" data-v="Saintrevit" aria-pressed="false">Saintrevit</button><button class="op" type="button" data-v="Mancha Senil" aria-pressed="false">Mancha Senil</button><button class="op" type="button" data-v="Saintgloss" aria-pressed="false">Saintgloss</button><button class="op" type="button" data-v="Clearlips" aria-pressed="false">Clearlips</button><button class="op" type="button" data-v="Olhos" aria-pressed="false">Olhos</button>
       <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
     </div>
   </div>

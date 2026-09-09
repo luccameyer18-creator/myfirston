@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ana Caroline</title>
-<meta name="description" content="Design personal · BROW LAMINATION · D. COLORAÇÃO · Design e Henna — Cambuí, Campinas">
+<meta name="description" content="Design Personal · Brow Lamination · D. Coloração · Design e Henna — Cambuí, Campinas">
 
 <!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
      tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ana Caroline">
 <meta property="og:title" content="Ana Caroline">
-<meta property="og:description" content="Design personal · BROW LAMINATION · D. COLORAÇÃO · Design e Henna — Cambuí, Campinas">
+<meta property="og:description" content="Design Personal · Brow Lamination · D. Coloração · Design e Henna — Cambuí, Campinas">
 <meta property="og:url" content="https://myfirston.github.io/sobrancelhas-campinas-ana-caroline/">
 <meta property="og:image" content="fotos/ilustrativas/ambiente.png">
 <meta property="og:image:width" content="1200">
@@ -139,6 +139,14 @@
   .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
           color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
   h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  /* A imagem que abre a secao de servicos. No celular ela e uma faixa baixa
+     (16:6) para nao empurrar a lista para fora da tela; no desktop cresce um
+     pouco. object-fit cobre porque a gerada sai 16:9 e o recorte e vertical. */
+  .capa-serv{position:relative;margin-bottom:26px;border-radius:18px;overflow:hidden;
+             background:var(--suave)}
+  .capa-serv img{display:block;width:100%;height:clamp(150px,34vw,260px);
+                 object-fit:cover;object-position:center}
 
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
@@ -350,7 +358,7 @@
   </div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>Design personal <i>•</i> BROW LAMINATION <i>•</i> D. COLORAÇÃO <i>•</i> Design e Henna <i>•</i> Naturale Brows <i>•</i></span><span>Design personal <i>•</i> BROW LAMINATION <i>•</i> D. COLORAÇÃO <i>•</i> Design e Henna <i>•</i> Naturale Brows <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Design Personal <i>•</i> Brow Lamination <i>•</i> D. Coloração <i>•</i> Design e Henna <i>•</i> Naturale Brows <i>•</i></span><span>Design Personal <i>•</i> Brow Lamination <i>•</i> D. Coloração <i>•</i> Design e Henna <i>•</i> Naturale Brows <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -363,27 +371,32 @@
 <section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
+  
+  
+  <div class="capa-serv rev">
+    <img src="fotos/ilustrativas/procedimento.png" alt="Ambiente de atendimento" loading="lazy" decoding="async">
+  </div>
   <div class="servicos">
     
     <details class="serv rev" style="--i:0">
-      <summary><b>Design personal</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Design Personal</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Desenho da sobrancelha de acordo com o formato do rosto, com medição e remoção dos fios fora do traçado, com pinça, linha ou cera.</p>
-        <a class="cta mini" href="https://wa.me/5519995022417?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Design%20personal." target="_blank" rel="noopener">Perguntar sobre Design personal</a>
+        <a class="cta mini" href="https://wa.me/5519995022417?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Design%20Personal." target="_blank" rel="noopener">Perguntar sobre Design Personal</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>BROW LAMINATION</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Brow Lamination</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Alinha e fixa os fios da sobrancelha na direção desejada, com efeito de fios mais cheios e penteados. Feito com produtos próprios para a região dos olhos.</p>
-        <a class="cta mini" href="https://wa.me/5519995022417?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20BROW%20LAMINATION." target="_blank" rel="noopener">Perguntar sobre BROW LAMINATION</a>
+        <a class="cta mini" href="https://wa.me/5519995022417?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Brow%20Lamination." target="_blank" rel="noopener">Perguntar sobre Brow Lamination</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>D. COLORAÇÃO</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>D. Coloração</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Tinge os fios da sobrancelha para dar mais definição e uniformizar a cor, sem marcar a pele como a henna.</p>
-        <a class="cta mini" href="https://wa.me/5519995022417?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20D.%20COLORA%C3%87%C3%83O." target="_blank" rel="noopener">Perguntar sobre D. COLORAÇÃO</a>
+        <a class="cta mini" href="https://wa.me/5519995022417?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20D.%20Colora%C3%A7%C3%A3o." target="_blank" rel="noopener">Perguntar sobre D. Coloração</a>
       </div>
     </details>
     <details class="serv rev" style="--i:0">
@@ -442,7 +455,7 @@
   <div class="passo">
     <p class="rot"><i>1</i> Escolha o serviço</p>
     <div class="ops" id="ag-servicos">
-      <button class="op" type="button" data-v="Design personal" aria-pressed="false">Design personal</button><button class="op" type="button" data-v="BROW LAMINATION" aria-pressed="false">BROW LAMINATION</button><button class="op" type="button" data-v="D. COLORAÇÃO" aria-pressed="false">D. COLORAÇÃO</button><button class="op" type="button" data-v="Design e Henna" aria-pressed="false">Design e Henna</button><button class="op" type="button" data-v="Naturale Brows" aria-pressed="false">Naturale Brows</button>
+      <button class="op" type="button" data-v="Design Personal" aria-pressed="false">Design Personal</button><button class="op" type="button" data-v="Brow Lamination" aria-pressed="false">Brow Lamination</button><button class="op" type="button" data-v="D. Coloração" aria-pressed="false">D. Coloração</button><button class="op" type="button" data-v="Design e Henna" aria-pressed="false">Design e Henna</button><button class="op" type="button" data-v="Naturale Brows" aria-pressed="false">Naturale Brows</button>
       <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
     </div>
   </div>

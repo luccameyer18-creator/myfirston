@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sobrancelhas Design Campinas Parque Prado</title>
-<meta name="description" content="Clientes · SD lover · Produtos · Parcerias — Vila Marieta, Campinas">
+<meta name="description" content="Epilação Facial · Sobrancelhas — Vila Marieta, Campinas">
 
 <!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
      tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sobrancelhas Design Campinas Parque Prado">
 <meta property="og:title" content="Sobrancelhas Design Campinas Parque Prado">
-<meta property="og:description" content="Clientes · SD lover · Produtos · Parcerias — Vila Marieta, Campinas">
+<meta property="og:description" content="Epilação Facial · Sobrancelhas — Vila Marieta, Campinas">
 <meta property="og:url" content="https://myfirston.github.io/sobrancelhas-design-campinas-parque-prado/">
 <meta property="og:image" content="fotos/ilustrativas/ambiente.png">
 <meta property="og:image:width" content="1200">
@@ -139,6 +139,14 @@
   .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
           color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
   h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  /* A imagem que abre a secao de servicos. No celular ela e uma faixa baixa
+     (16:6) para nao empurrar a lista para fora da tela; no desktop cresce um
+     pouco. object-fit cobre porque a gerada sai 16:9 e o recorte e vertical. */
+  .capa-serv{position:relative;margin-bottom:26px;border-radius:18px;overflow:hidden;
+             background:var(--suave)}
+  .capa-serv img{display:block;width:100%;height:clamp(150px,34vw,260px);
+                 object-fit:cover;object-position:center}
 
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
@@ -350,7 +358,7 @@
   </div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>Clientes <i>•</i> SD lover <i>•</i> Produtos <i>•</i> Parcerias <i>•</i> Tratamento <i>•</i> Epilação Facial <i>•</i></span><span>Clientes <i>•</i> SD lover <i>•</i> Produtos <i>•</i> Parcerias <i>•</i> Tratamento <i>•</i> Epilação Facial <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Epilação Facial <i>•</i> Sobrancelhas <i>•</i></span><span>Epilação Facial <i>•</i> Sobrancelhas <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -363,48 +371,22 @@
 <section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
+  
+  
   <div class="servicos">
     
     <details class="serv rev" style="--i:0">
-      <summary><b>Clientes</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Clientes." target="_blank" rel="noopener">Perguntar sobre Clientes</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:1">
-      <summary><b>SD lover</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20SD%20lover." target="_blank" rel="noopener">Perguntar sobre SD lover</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:2">
-      <summary><b>Produtos</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Produtos." target="_blank" rel="noopener">Perguntar sobre Produtos</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:0">
-      <summary><b>Parcerias</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Parcerias." target="_blank" rel="noopener">Perguntar sobre Parcerias</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:1">
-      <summary><b>Tratamento</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Tratamento." target="_blank" rel="noopener">Perguntar sobre Tratamento</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:2">
       <summary><b>Epilação Facial</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Limpeza e cuidado da pele do rosto, com remoção de impurezas e hidratação.</p>
         <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Epila%C3%A7%C3%A3o%20Facial." target="_blank" rel="noopener">Perguntar sobre Epilação Facial</a>
+      </div>
+    </details>
+    <details class="serv rev" style="--i:1">
+      <summary><b>Sobrancelhas</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <div class="corpo">
+        <p class="oquee"><span class="rotulo">O que é</span>Desenho da sobrancelha de acordo com o formato do rosto, com medição e remoção dos fios fora do traçado, com pinça, linha ou cera.</p>
+        <a class="cta mini" href="https://wa.me/5519983690019?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Sobrancelhas." target="_blank" rel="noopener">Perguntar sobre Sobrancelhas</a>
       </div>
     </details>
   </div>
@@ -456,7 +438,7 @@
   <div class="passo">
     <p class="rot"><i>1</i> Escolha o serviço</p>
     <div class="ops" id="ag-servicos">
-      <button class="op" type="button" data-v="Clientes" aria-pressed="false">Clientes</button><button class="op" type="button" data-v="SD lover" aria-pressed="false">SD lover</button><button class="op" type="button" data-v="Produtos" aria-pressed="false">Produtos</button><button class="op" type="button" data-v="Parcerias" aria-pressed="false">Parcerias</button><button class="op" type="button" data-v="Tratamento" aria-pressed="false">Tratamento</button><button class="op" type="button" data-v="Epilação Facial" aria-pressed="false">Epilação Facial</button>
+      <button class="op" type="button" data-v="Epilação Facial" aria-pressed="false">Epilação Facial</button><button class="op" type="button" data-v="Sobrancelhas" aria-pressed="false">Sobrancelhas</button>
       <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
     </div>
   </div>

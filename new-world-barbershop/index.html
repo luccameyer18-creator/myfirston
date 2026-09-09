@@ -159,6 +159,15 @@ section{padding:76px 0;border-top:1px solid var(--filete)}
 section h2{font-size:clamp(30px,7vw,52px);margin:10px 0 34px}
 
 /* --- servicos: cardapio, nao card de preco --- */
+/* A faixa que abre o cardapio. Escura como o resto da pagina: um degrade por
+   cima costura a base da imagem no fundo, senao a borda reta da foto corta a
+   secao em duas no meio de uma pagina que nao tem nenhuma outra borda reta. */
+.capa-serv{position:relative;margin:0 0 30px;border-radius:4px;overflow:hidden}
+.capa-serv img{display:block;width:100%;height:clamp(160px,36vw,280px);
+  object-fit:cover;object-position:center;filter:saturate(.92)}
+.capa-serv::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to bottom,transparent 55%,var(--ink))}
+
 .menu{border-top:1px solid var(--filete)}
 .item{display:flex;align-items:baseline;gap:14px;padding:20px 2px;
   border-bottom:1px solid var(--filete);text-decoration:none;color:inherit;
@@ -386,7 +395,7 @@ footer p{color:rgba(245,241,234,.55);margin-bottom:5px}
   <div>
     <span class="olho">Quem atende</span>
     <h2 class="rev">New World Barbershop</h2>
-    <p class="fatos rev">Barbearia em Jardim Proença</p>
+    
     <p class="rev" style="margin-top:10px"><a href="https://www.instagram.com/newworldbarbershop/" target="_blank" rel="noopener" style="color:var(--accent)">@newworldbarbershop no Instagram</a></p>
   </div>
 </div></section>

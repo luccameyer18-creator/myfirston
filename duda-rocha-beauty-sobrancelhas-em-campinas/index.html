@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Duda Rocha Beauty</title>
-<meta name="description" content="•Lips spa• · •Henna• · •Design person• · •Design masc• — R. Ferreira Penteado, 341">
+<meta name="description" content="Lips Spa · Henna · Design Person · Design Masc — R. Ferreira Penteado, 341">
 
 <!-- NAO INDEXAR. Esta pagina tem nome, telefone e endereco de um negocio real e
      tem cara de site oficial dele. Se o Google indexasse, poderia competir com a
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Duda Rocha Beauty">
 <meta property="og:title" content="Duda Rocha Beauty">
-<meta property="og:description" content="•Lips spa• · •Henna• · •Design person• · •Design masc• — R. Ferreira Penteado, 341">
+<meta property="og:description" content="Lips Spa · Henna · Design Person · Design Masc — R. Ferreira Penteado, 341">
 <meta property="og:url" content="https://myfirston.github.io/duda-rocha-beauty-sobrancelhas-em-campinas/">
 <meta property="og:image" content="fotos/ilustrativas/ambiente.png">
 <meta property="og:image:width" content="1200">
@@ -139,6 +139,14 @@
   .rotulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
           color:color-mix(in srgb,var(--texto) 55%,transparent);margin-bottom:10px}
   h2{font-size:clamp(23px,5.5vw,34px);margin-bottom:22px}
+
+  /* A imagem que abre a secao de servicos. No celular ela e uma faixa baixa
+     (16:6) para nao empurrar a lista para fora da tela; no desktop cresce um
+     pouco. object-fit cobre porque a gerada sai 16:9 e o recorte e vertical. */
+  .capa-serv{position:relative;margin-bottom:26px;border-radius:18px;overflow:hidden;
+             background:var(--suave)}
+  .capa-serv img{display:block;width:100%;height:clamp(150px,34vw,260px);
+                 object-fit:cover;object-position:center}
 
   .servicos{display:grid;gap:12px;grid-template-columns:1fr}
   @media(min-width:640px){.servicos{grid-template-columns:repeat(2,minmax(260px,1fr))}}
@@ -350,7 +358,7 @@
   </div>
 </header>
 
-<div class="mq" aria-hidden="true"><div class="fita"><span>•Lips spa• <i>•</i> •Henna• <i>•</i> •Design person• <i>•</i> •Design masc• <i>•</i> •Brow Lamination <i>•</i> •Antes e depois• <i>•</i> •Tipos de sobr.• <i>•</i> •Diamante negro• <i>•</i></span><span>•Lips spa• <i>•</i> •Henna• <i>•</i> •Design person• <i>•</i> •Design masc• <i>•</i> •Brow Lamination <i>•</i> •Antes e depois• <i>•</i> •Tipos de sobr.• <i>•</i> •Diamante negro• <i>•</i></span></div></div>
+<div class="mq" aria-hidden="true"><div class="fita"><span>Lips Spa <i>•</i> Henna <i>•</i> Design Person <i>•</i> Design Masc <i>•</i> Brow Lamination <i>•</i> Diamante Negro <i>•</i></span><span>Lips Spa <i>•</i> Henna <i>•</i> Design Person <i>•</i> Design Masc <i>•</i> Brow Lamination <i>•</i> Diamante Negro <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -363,62 +371,53 @@
 <section class="wrap" id="servicos">
   <p class="rotulo rev">O que fazemos</p>
   <h2 class="rev">Serviços</h2>
+  
+  
+  <div class="capa-serv rev">
+    <img src="fotos/ilustrativas/procedimento.png" alt="Ambiente de atendimento" loading="lazy" decoding="async">
+  </div>
   <div class="servicos">
     
     <details class="serv rev" style="--i:0">
-      <summary><b>•Lips spa•</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Lips Spa</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Pigmentação semipermanente dos lábios para realçar o contorno e uniformizar a cor.</p>
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Lips%20spa%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Lips spa•</a>
+        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Lips%20Spa." target="_blank" rel="noopener">Perguntar sobre Lips Spa</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>•Henna•</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Henna</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Design da sobrancelha com aplicação de henna, que tinge os fios e a pele por baixo deles, preenchendo falhas e marcando o desenho por alguns dias.</p>
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Henna%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Henna•</a>
+        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Henna." target="_blank" rel="noopener">Perguntar sobre Henna</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>•Design person•</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Design Person</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Desenho da sobrancelha de acordo com o formato do rosto, com medição e remoção dos fios fora do traçado, com pinça, linha ou cera.</p>
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Design%20person%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Design person•</a>
+        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Design%20Person." target="_blank" rel="noopener">Perguntar sobre Design Person</a>
       </div>
     </details>
     <details class="serv rev" style="--i:0">
-      <summary><b>•Design masc•</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Design Masc</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Desenho da sobrancelha de acordo com o formato do rosto, com medição e remoção dos fios fora do traçado, com pinça, linha ou cera.</p>
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Design%20masc%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Design masc•</a>
+        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Design%20Masc." target="_blank" rel="noopener">Perguntar sobre Design Masc</a>
       </div>
     </details>
     <details class="serv rev" style="--i:1">
-      <summary><b>•Brow Lamination</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Brow Lamination</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         <p class="oquee"><span class="rotulo">O que é</span>Alinha e fixa os fios da sobrancelha na direção desejada, com efeito de fios mais cheios e penteados. Feito com produtos próprios para a região dos olhos.</p>
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Brow%20Lamination." target="_blank" rel="noopener">Perguntar sobre •Brow Lamination</a>
+        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Brow%20Lamination." target="_blank" rel="noopener">Perguntar sobre Brow Lamination</a>
       </div>
     </details>
     <details class="serv rev" style="--i:2">
-      <summary><b>•Antes e depois•</b><span aria-hidden="true">&rsaquo;</span></summary>
+      <summary><b>Diamante Negro</b><span aria-hidden="true">&rsaquo;</span></summary>
       <div class="corpo">
         
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Antes%20e%20depois%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Antes e depois•</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:0">
-      <summary><b>•Tipos de sobr.•</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Tipos%20de%20sobr.%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Tipos de sobr.•</a>
-      </div>
-    </details>
-    <details class="serv rev" style="--i:1">
-      <summary><b>•Diamante negro•</b><span aria-hidden="true">&rsaquo;</span></summary>
-      <div class="corpo">
-        
-        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20%E2%80%A2Diamante%20negro%E2%80%A2." target="_blank" rel="noopener">Perguntar sobre •Diamante negro•</a>
+        <a class="cta mini" href="https://wa.me/5519993221765?text=Oi!%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20saber%20sobre%20Diamante%20Negro." target="_blank" rel="noopener">Perguntar sobre Diamante Negro</a>
       </div>
     </details>
   </div>
@@ -430,7 +429,7 @@
     <div class="rev">
       <p class="rotulo">Quem atende</p>
       <h2>Duda Rocha Beauty</h2>
-      <p class="fatos">Salão de sobrancelhas em R. Ferreira Penteado</p>
+      <p class="fatos">Salão de sobrancelhas em Centro</p>
       <p style="margin-top:8px"><a href="https://www.instagram.com/dudarocha.beauty?igsh=dzAxMHBlYnA1b3dx" target="_blank" rel="noopener" style="color:var(--destaque-escuro)">@dudarocha.beauty no Instagram</a></p>
       <a class="cta" href="https://wa.me/5519993221765" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
@@ -463,7 +462,7 @@
   <div class="passo">
     <p class="rot"><i>1</i> Escolha o serviço</p>
     <div class="ops" id="ag-servicos">
-      <button class="op" type="button" data-v="•Lips spa•" aria-pressed="false">•Lips spa•</button><button class="op" type="button" data-v="•Henna•" aria-pressed="false">•Henna•</button><button class="op" type="button" data-v="•Design person•" aria-pressed="false">•Design person•</button><button class="op" type="button" data-v="•Design masc•" aria-pressed="false">•Design masc•</button><button class="op" type="button" data-v="•Brow Lamination" aria-pressed="false">•Brow Lamination</button><button class="op" type="button" data-v="•Antes e depois•" aria-pressed="false">•Antes e depois•</button><button class="op" type="button" data-v="•Tipos de sobr.•" aria-pressed="false">•Tipos de sobr.•</button><button class="op" type="button" data-v="•Diamante negro•" aria-pressed="false">•Diamante negro•</button>
+      <button class="op" type="button" data-v="Lips Spa" aria-pressed="false">Lips Spa</button><button class="op" type="button" data-v="Henna" aria-pressed="false">Henna</button><button class="op" type="button" data-v="Design Person" aria-pressed="false">Design Person</button><button class="op" type="button" data-v="Design Masc" aria-pressed="false">Design Masc</button><button class="op" type="button" data-v="Brow Lamination" aria-pressed="false">Brow Lamination</button><button class="op" type="button" data-v="Diamante Negro" aria-pressed="false">Diamante Negro</button>
       <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
     </div>
   </div>
