@@ -4,10 +4,10 @@
   "endpoint": "social-publisher/v1/generate-image",
   "nicho": "sobrancelhas",
   "ramo": "Esteticista",
-  "prompt": "Interior de um estudio brasileiro de esteticista, pequeno e sofisticado. Maca de atendimento com lencol claro, luminaria de aro, espelho, bancada clara com poucos frascos organizados, planta discreta, parede em tom nude. Tom geral claro, nude e off-white, luz suave. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. A paleta dominante deve girar em torno de #a89078.",
+  "prompt": "Interior de um estudio brasileiro de esteticista, pequeno e sofisticado. Maca de atendimento com lencol claro, luminaria de aro, espelho, bancada clara com poucos frascos organizados, planta discreta, parede em tom nude. Tom geral claro, nude e off-white, luz suave. Vista de canto, com a poltrona de atendimento e o espelho de corpo inteiro. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. Se houver espelho, ele deve refletir corretamente o que esta a sua frente. Detalhes pontuais na cor #a89078 (estofado, frascos ou luminaria), mantendo o ambiente em tons naturais - nao tingir a cena inteira nessa cor.",
   "semente": "https://static.wixstatic.com/media/edffd6_dd93ce76c9a84cd780844dacc6c50273~mv2.jpg",
-  "executionId": "e71409dc-0dde-44f6-a4b3-efbae3334d46",
-  "fileId": "edffd6_270ae28b42e645a69e79e1047d92c7dc~mv2.png",
-  "gerada_em": "2026-09-07T12:19:32.079Z",
+  "executionId": "af0a6216-27ae-482d-a5d8-90e23d9ac2dc",
+  "fileId": "edffd6_3da4177de6c54566a9d1c310a5baf9f2~mv2.png",
+  "gerada_em": "2026-09-09T01:31:24.287Z",
   "aviso": "Imagem ILUSTRATIVA gerada por IA. Nao e foto do negocio. A pagina precisa declarar isso."
 }

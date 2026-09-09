@@ -1,0 +1,13 @@
+{
+  "arquivo": "ambiente.png",
+  "origem": "ia_wix",
+  "endpoint": "social-publisher/v1/generate-image",
+  "nicho": "sobrancelhas",
+  "ramo": "Salão de sobrancelhas",
+  "prompt": "Interior de um estudio brasileiro de salão de sobrancelhas, pequeno e sofisticado. Maca de atendimento com lencol claro, luminaria de aro, espelho, bancada clara com poucos frascos organizados, planta discreta, parede em tom nude. Tom geral claro, nude e off-white, luz suave. Plano da recepcao, com balcao claro, banqueta e uma prateleira de produtos. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. Se houver espelho, ele deve refletir corretamente o que esta a sua frente. Detalhes pontuais na cor #906048 (estofado, frascos ou luminaria), mantendo o ambiente em tons naturais - nao tingir a cena inteira nessa cor.",
+  "semente": "https://static.wixstatic.com/media/edffd6_dd93ce76c9a84cd780844dacc6c50273~mv2.jpg",
+  "executionId": "ea39d148-b45a-4acb-b516-620f8345a626",
+  "fileId": "edffd6_c07998fc39964ae7be6ef60707cb1ec0~mv2.png",
+  "gerada_em": "2026-09-09T01:29:37.112Z",
+  "aviso": "Imagem ILUSTRATIVA gerada por IA. Nao e foto do negocio. A pagina precisa declarar isso."
+}

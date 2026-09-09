@@ -4,10 +4,10 @@
   "endpoint": "social-publisher/v1/generate-image",
   "nicho": "sobrancelhas",
   "ramo": "Salão de Beleza",
-  "prompt": "Interior de um estudio brasileiro de salão de beleza, pequeno e sofisticado. Maca de atendimento com lencol claro, luminaria de aro, espelho, bancada clara com poucos frascos organizados, planta discreta, parede em tom nude. Tom geral claro, nude e off-white, luz suave. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima.",
+  "prompt": "Interior de um estudio brasileiro de salão de beleza, pequeno e sofisticado. Maca de atendimento com lencol claro, luminaria de aro, espelho, bancada clara com poucos frascos organizados, planta discreta, parede em tom nude. Tom geral claro, nude e off-white, luz suave. Enquadramento em diagonal, maca a esquerda e bancada de trabalho a direita. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. Se houver espelho, ele deve refletir corretamente o que esta a sua frente.",
   "semente": "https://static.wixstatic.com/media/edffd6_dd93ce76c9a84cd780844dacc6c50273~mv2.jpg",
-  "executionId": "bb223df1-e1e8-4403-9bc3-f84a75806abe",
-  "fileId": "edffd6_07471f953fe74d0c949644ec44086c3e~mv2.png",
-  "gerada_em": "2026-09-07T12:22:21.693Z",
+  "executionId": "bbcb6249-a279-4cb8-be48-a5007adfb977",
+  "fileId": "edffd6_3618c5601bb4497a88d178b9e89e8d8b~mv2.png",
+  "gerada_em": "2026-09-09T01:32:52.826Z",
   "aviso": "Imagem ILUSTRATIVA gerada por IA. Nao e foto do negocio. A pagina precisa declarar isso."
 }

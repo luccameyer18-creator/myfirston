@@ -1,0 +1,13 @@
+{
+  "arquivo": "ambiente.png",
+  "origem": "ia_wix",
+  "endpoint": "social-publisher/v1/generate-image",
+  "nicho": "barbearia",
+  "ramo": "Barbearia",
+  "prompt": "Interior de uma barbearia masculina brasileira de bairro, bem cuidada. Cadeira de barbeiro de couro, bancada de madeira escura, espelho grande, prateleira com frascos de produto, piso escuro, detalhes em latao. Tom geral escuro e quente, clima noturno. Vista de canto, com a bancada a esquerda e uma poltrona de espera a direita. Fotografia editorial realista, plano aberto horizontal, profundidade de campo suave, SEM NENHUMA PESSOA, SEM ROSTO, SEM TEXTO, SEM LETRA, SEM LOGOTIPO, SEM MARCA DAGUA. Espaco vazio e organizado, luz natural difusa com uma fonte quente lateral, area limpa e uniforme na metade inferior do quadro para receber tipografia por cima. Se houver espelho, ele deve refletir corretamente o que esta a sua frente. Detalhes pontuais na cor #783018 (estofado, frascos ou luminaria), mantendo o ambiente em tons naturais - nao tingir a cena inteira nessa cor.",
+  "semente": "https://static.wixstatic.com/media/edffd6_1733bb7a62f24bf8ad62bcf3ab2d62c5~mv2.png",
+  "executionId": "51e8c38c-099d-4130-8940-a88fcf438ea0",
+  "fileId": "edffd6_8f8a221f621a49908e731bb784ef3170~mv2.png",
+  "gerada_em": "2026-09-09T01:28:52.129Z",
+  "aviso": "Imagem ILUSTRATIVA gerada por IA. Nao e foto do negocio. A pagina precisa declarar isso."
+}
