@@ -33,6 +33,16 @@
     --suave:color-mix(in srgb, var(--destaque) 12%, var(--fundo));
     --borda:color-mix(in srgb, var(--texto) 12%, transparent);
   }
+  /* Mapeia a paleta desta pagina para as variaveis dos modulos de movimento e
+     de agendamento, que sao os mesmos nos dois nichos. */
+  :root{
+    --mv-borda:var(--borda); --mv-faixa:var(--suave);
+    --mv-mq-txt:var(--texto); --mv-destaque:var(--destaque);
+    --ag-fundo:var(--fundo); --ag-texto:var(--texto);
+    --ag-destaque:var(--destaque); --ag-sobre-destaque:var(--sobre-destaque);
+    --ag-borda:var(--borda);
+    --ag-suave-txt:color-mix(in srgb,var(--texto) 62%,transparent);
+  }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--fundo);color:var(--texto);
@@ -205,8 +215,8 @@
   .galeria{display:grid;gap:9px;grid-template-columns:repeat(2,1fr)}
   @media(min-width:700px){.galeria{grid-template-columns:repeat(3,1fr)}}
   /* Com 4 fotos, 3 colunas deixariam uma sozinha na segunda fileira. */
-  .galeria.q4{grid-template-columns:repeat(2,1fr)}
-  @media(min-width:700px){.galeria.q4{grid-template-columns:repeat(2,1fr)}}
+  .galeria.q4,.galeria.q2{grid-template-columns:repeat(2,1fr)}
+  @media(min-width:700px){.galeria.q4,.galeria.q2{grid-template-columns:repeat(2,1fr)}}
   .galeria button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:12px;
                overflow:hidden;-webkit-tap-highlight-color:transparent}
   .galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;display:block;
@@ -250,6 +260,70 @@
   html:not(.js) .barra{transform:none;pointer-events:auto}
   .barra .cta{margin:0;width:100%;justify-content:center}
   @media(min-width:760px){.barra{display:none} footer{padding-bottom:36px}}
+
+/* --- Marquee infinito: a assinatura visual do nicho ---------------------
+   Duas copias da mesma lista deslizando; quando a primeira sai inteira, o
+   deslocamento volta a zero e ninguem ve a emenda. Puro CSS: sem JS, sem lib,
+   e para sozinho para quem pediu menos movimento. */
+.mq{overflow:hidden;white-space:nowrap;border-top:1px solid var(--mv-borda);
+  border-bottom:1px solid var(--mv-borda);padding:14px 0;background:var(--mv-faixa)}
+.mq .fita{display:inline-flex;gap:0;animation:mq 28s linear infinite;will-change:transform}
+.mq:hover .fita{animation-play-state:paused}
+.mq span{display:inline-flex;align-items:center;gap:26px;padding-right:26px;
+  font-size:clamp(15px,3.4vw,21px);letter-spacing:.04em;color:var(--mv-mq-txt)}
+.mq span i{font-style:normal;color:var(--mv-destaque)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq .fita{animation:none}}
+
+/* --- Revelacao por linha ------------------------------------------------
+   Cada linha sobe de dentro de uma janela que corta o excesso. E o efeito que a
+   pesquisa faz com GSAP SplitText; aqui e overflow hidden + translateY, e o
+   .js na frente garante que sem script o texto simplesmente aparece. */
+.js .linhas{overflow:hidden}
+.js .linhas > span{display:block;transform:translateY(105%);
+  transition:transform .62s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms)}
+.js .linhas.on > span{transform:none}
+@media(prefers-reduced-motion:reduce){
+  .js .linhas > span{transform:none;transition:none}
+}
+
+/* --- Parallax suave na foto da dobra ------------------------------------
+   A foto anda mais devagar que a pagina. Uma linha de transform, atualizada em
+   requestAnimationFrame, e so no desktop: no celular o custo por quadro nao
+   compensa e a dobra ja sai da tela rapido. */
+@media(min-width:821px) and (prefers-reduced-motion:no-preference){
+  .js .prx{will-change:transform}
+}
+
+
+.ag{margin-top:22px}
+.ag .passo{margin-bottom:22px}
+.ag .rot{display:flex;align-items:center;gap:9px;margin-bottom:10px;
+  font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ag-suave-txt)}
+.ag .rot i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+  background:var(--ag-destaque);color:var(--ag-sobre-destaque);font:600 12px/1 sans-serif;font-style:normal}
+.ag .ops{display:flex;flex-wrap:wrap;gap:8px}
+.ag button.op{padding:11px 15px;border-radius:999px;border:1px solid var(--ag-borda);
+  background:var(--ag-fundo);color:var(--ag-texto);font:inherit;font-size:14px;cursor:pointer;
+  transition:border-color .18s,background .18s,transform .12s}
+.ag button.op:hover{border-color:var(--ag-destaque)}
+.ag button.op:active{transform:scale(.97)}
+.ag button.op[aria-pressed="true"]{background:var(--ag-destaque);color:var(--ag-sobre-destaque);
+  border-color:var(--ag-destaque)}
+.ag .dias{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}
+.ag .dias button{flex:0 0 auto;scroll-snap-align:start;min-width:64px;padding:9px 12px;border-radius:12px;
+  display:grid;gap:2px;text-align:center;line-height:1.25}
+.ag .dias b{font-size:17px;font-weight:600}
+.ag .dias small{font-size:11px;text-transform:uppercase;letter-spacing:.06em;opacity:.72}
+.ag .horas{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.ag .horas button{padding:11px 6px;border-radius:10px;text-align:center;font-variant-numeric:tabular-nums}
+.ag .fecho{margin-top:6px}
+.ag .resumo{margin-bottom:12px;font-size:15px;color:var(--ag-suave-txt)}
+.ag .resumo b{color:var(--ag-texto)}
+.ag .nota{margin-top:10px;font-size:12.5px;line-height:1.5;color:var(--ag-suave-txt)}
+.ag [hidden]{display:none !important}
+@media(prefers-reduced-motion:reduce){.ag button.op{transition:none}}
+
 </style>
 </head>
 <body class="">
@@ -260,21 +334,23 @@
   <ul id="menu">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
-    
+    <li><a href="#fotos">Fotos</a></li>
     <li><a href="#especialista">Especialista</a></li>
     <li><a href="#agendar">Agendar</a></li>
   </ul>
 </nav>
 
 <header id="topo">
-  <div class="bg gerada" style="background-image:url('fotos/ilustrativas/ambiente.png')"></div>
-  <span class="ilustra">Imagem ilustrativa</span>
+  <div class="bg prx gerada" style="background-image:url('fotos/ilustrativas/ambiente.png')"></div>
+  
   <div class="wrap in">
-    <h1 class="rev">Gabriela Lima</h1>
+    <h1><span class="linhas"><span style="--d:0ms">Gabriela</span></span><span class="linhas"><span style="--d:90ms">Lima</span></span></h1>
     <p class="lead rev">Campinas · Esteticista</p>
     <a class="cta rev" href="https://wa.me/5519989359086" target="_blank" rel="noopener">Falar no WhatsApp</a>
   </div>
 </header>
+
+<div class="mq" aria-hidden="true"><div class="fita"><span>Cadastrar-se no Instagram <i>•</i> Termos de Uso <i>•</i> Política de Privacidade <i>•</i></span><span>Cadastrar-se no Instagram <i>•</i> Termos de Uso <i>•</i> Política de Privacidade <i>•</i></span></div></div>
 
 <section class="wrap" id="sobre">
   <p class="rotulo rev">Sobre</p>
@@ -339,12 +415,49 @@
 </section>
 
 
+<section class="wrap" id="fotos">
+  
+  <p class="rotulo rev">Ambiente</p>
+  <div class="galeria q2">
+    <button class="rev" type="button" data-i="0" aria-label="Ampliar foto 1" style="--i:0"><img src="fotos/ilustrativas/detalhe.png" alt="Foto de Gabriela Lima" loading="lazy" decoding="async"></button><button class="rev" type="button" data-i="1" aria-label="Ampliar foto 2" style="--i:1"><img src="fotos/ilustrativas/bancada.png" alt="Foto de Gabriela Lima" loading="lazy" decoding="async"></button>
+  </div>
+</section>
 
 <section class="wrap" id="agendar">
   <p class="rotulo rev">Agendar</p>
   <h2 class="rev">Horários e endereço</h2>
-  <p class="rev" style="margin:6px 0 22px"><a class="cta" href="https://wa.me/5519989359086" target="_blank" rel="noopener">Agendar pelo WhatsApp</a></p>
-  <div class="info">
+  
+<div class="ag" id="ag"
+     data-agenda='[null,null,"09:00–19:00","09:00–19:00","09:00–19:00","09:00–19:00","09:00–15:00"]'
+     data-wa="https://wa.me/5519989359086"
+     data-nome="Gabriela Lima">
+  
+  <div class="passo">
+    <p class="rot"><i>1</i> Escolha o serviço</p>
+    <div class="ops" id="ag-servicos">
+      <button class="op" type="button" data-v="Cadastrar-se no Instagram" aria-pressed="false">Cadastrar-se no Instagram</button><button class="op" type="button" data-v="Termos de Uso" aria-pressed="false">Termos de Uso</button><button class="op" type="button" data-v="Política de Privacidade" aria-pressed="false">Política de Privacidade</button>
+      <button class="op" type="button" data-v="" aria-pressed="false">Outro</button>
+    </div>
+  </div>
+
+  <div class="passo">
+    <p class="rot"><i>2</i> Escolha o dia</p>
+    <div class="ops dias" id="ag-dias"></div>
+  </div>
+
+  <div class="passo" id="ag-passo-hora" hidden>
+    <p class="rot"><i>3</i> Horário de preferência</p>
+    <div class="horas ops" id="ag-horas"></div>
+  </div>
+
+  <div class="fecho">
+    <p class="resumo" id="ag-resumo"></p>
+    <a class="cta" id="ag-enviar" href="https://wa.me/5519989359086" target="_blank" rel="noopener">Pedir horário no WhatsApp</a>
+    <p class="nota">Os horários mostrados são os de funcionamento. A confirmação é feita
+    pelo WhatsApp, direto com Gabriela Lima.</p>
+  </div>
+</div>
+  <div class="info" style="margin-top:34px">
     <div class="rev"><p class="rotulo">Onde estamos</p><h2 style="font-size:20px">Edifício Banco Segurança - Rua Dr. Costa Aguiar, 698 - Centro, Campinas - SP, 13010-061</h2>
       <p style="margin-top:10px"><a href="https://www.google.com/maps/place/Gabriela+Lima+%7C+Sobrancelhas+e+L%C3%A1bios+Campinas/data=!4m7!3m6!1s0x94c8c782191f995d:0x9d2375a94794ddca!8m2!3d-22.9059545!4d-47.0598172!16s%2Fg%2F11s740gq8y!19sChIJXZkfGYLHyJQRyt2UR6l1I50?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkwMi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener" style="color:var(--destaque-escuro)">Ver no mapa</a></p></div>
     <div class="rev"><p class="rotulo">Horários</p>
@@ -354,7 +467,7 @@
 
 <footer class="wrap">
   <p>Gabriela Lima | Sobrancelhas e Lábios Campinas · Edifício Banco Segurança - Rua Dr. Costa Aguiar, 698 - Centro, Campinas - SP, 13010-061</p>
-  <p style="margin-top:6px">Prévia de site preparada pela MyFirstOn com informações públicas do Google. A imagem de ambiente é ilustrativa, gerada por IA — não é uma foto deste estabelecimento. Ela é substituída pelas fotos reais assim que a proprietária as enviar.</p>
+  <p style="margin-top:6px">Prévia de site preparada pela MyFirstOn com informações públicas do Google. As imagens de ambiente são exemplos e podem ser trocadas pelas fotos do próprio espaço.</p>
 </footer>
 
 <div class="lupa" id="lupa" role="dialog" aria-modal="true" aria-label="Foto ampliada">
@@ -372,6 +485,160 @@
   // para um fade), e CSS scroll-driven (e scrub: reverte ao subir a pagina).
   // Isto aqui pesa ~400 bytes e faz exatamente o que o QA cobra.
   document.documentElement.classList.add('js');
+
+(function () {
+  /* Revelacao por linha: dispara quando o bloco entra na tela. */
+  var linhas = document.querySelectorAll('.linhas');
+  if (!window.IntersectionObserver) {
+    for (var i = 0; i < linhas.length; i++) linhas[i].classList.add('on');
+  } else {
+    var obs = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (e.isIntersecting || e.boundingClientRect.top < 0) {
+          e.target.classList.add('on'); obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: .1 });
+    for (var j = 0; j < linhas.length; j++) obs.observe(linhas[j]);
+  }
+
+  /* Parallax: so em tela grande, so para quem nao pediu menos movimento, e so
+     enquanto a dobra esta visivel - fora dela nao ha o que animar. */
+  var alvo = document.querySelector('.prx');
+  var grande = window.matchMedia('(min-width:821px)').matches;
+  var calmo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (alvo && grande && !calmo) {
+    var pedido = false;
+    window.addEventListener('scroll', function () {
+      if (pedido) return;
+      pedido = true;
+      requestAnimationFrame(function () {
+        pedido = false;
+        var y = window.scrollY;
+        if (y < window.innerHeight * 1.2) alvo.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
+      });
+    }, { passive: true });
+  }
+})();
+
+
+(function () {
+  var raiz = document.getElementById('ag');
+  if (!raiz) return;
+  var agenda = JSON.parse(raiz.getAttribute('data-agenda') || '[]');
+  var wa = raiz.getAttribute('data-wa');
+  var nome = raiz.getAttribute('data-nome');
+  var elServ = document.getElementById('ag-servicos');
+  var elDias = document.getElementById('ag-dias');
+  var elHoras = document.getElementById('ag-horas');
+  var passoHora = document.getElementById('ag-passo-hora');
+  var resumo = document.getElementById('ag-resumo');
+  var enviar = document.getElementById('ag-enviar');
+  var escolha = { servico: null, dia: null, hora: null };
+
+  var NOMES = ['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+  var CURTO = ['dom','seg','ter','qua','qui','sex','sáb'];
+  var MES = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+
+  function minutos(faixa) {
+    if (!faixa || /fechad/i.test(faixa)) return null;
+    var m = faixa.match(/(\d{1,2})(?::(\d{2}))?\s*(?:h|:00)?\s*(?:as|às|–|—|-|até)\s*(\d{1,2})(?::(\d{2}))?/i);
+    if (!m) return null;
+    var ini = +m[1] * 60 + (+(m[2] || 0)), fim = +m[3] * 60 + (+(m[4] || 0));
+    return fim > ini ? { ini: ini, fim: fim } : null;
+  }
+  function hhmm(min) {
+    var h = Math.floor(min / 60), m = min % 60;
+    return (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m;
+  }
+  function marcar(container, alvo) {
+    var bs = container.querySelectorAll('button');
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', bs[i] === alvo ? 'true' : 'false');
+  }
+
+  /* Proximos 14 dias em que o negocio abre. Comeca amanha: pedir horario para
+     "hoje daqui a pouco" pelo site nao ajuda ninguem - para hoje a pessoa liga. */
+  var hoje = new Date();
+  var dias = [];
+  for (var d = 1; d <= 14 && dias.length < 10; d++) {
+    var data = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate() + d);
+    var faixa = agenda[data.getDay()];
+    if (minutos(faixa)) dias.push({ data: data, faixa: faixa });
+  }
+  if (!dias.length) { raiz.setAttribute('hidden', ''); return; }
+
+  for (var i = 0; i < dias.length; i++) {
+    (function (item) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'op'; b.setAttribute('aria-pressed', 'false');
+      b.innerHTML = '<b>' + item.data.getDate() + '</b><small>' + CURTO[item.data.getDay()] + ' ' + MES[item.data.getMonth()] + '</small>';
+      b.addEventListener('click', function () {
+        escolha.dia = item; escolha.hora = null;
+        marcar(elDias, b);
+        montarHoras(item.faixa);
+        passoHora.hidden = false;
+        atualizar();
+      });
+      elDias.appendChild(b);
+    })(dias[i]);
+  }
+
+  function montarHoras(faixa) {
+    elHoras.innerHTML = '';
+    var f = minutos(faixa);
+    if (!f) return;
+    /* Para de oferecer 1h antes de fechar: ninguem comeca um atendimento no
+       minuto do fechamento.
+       O passo cresce em jornada longa: de 09:00 as 21:00, de 30 em 30, sao 22
+       botoes - um paredao que a pessoa rola sem ler. Acima de 7h de expediente
+       o passo vira 1h e a lista volta a caber na tela. */
+    var passo = (f.fim - f.ini) > 420 ? 60 : 30;
+    for (var t = f.ini; t <= f.fim - 60; t += passo) {
+      (function (min) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'op'; b.textContent = hhmm(min);
+        b.setAttribute('aria-pressed', 'false');
+        b.addEventListener('click', function () { escolha.hora = hhmm(min); marcar(elHoras, b); atualizar(); });
+        elHoras.appendChild(b);
+      })(t);
+    }
+  }
+
+  if (elServ) {
+    var bs = elServ.querySelectorAll('button');
+    for (var k = 0; k < bs.length; k++) {
+      (function (b) {
+        b.addEventListener('click', function () {
+          escolha.servico = b.getAttribute('data-v') || null;
+          marcar(elServ, b); atualizar();
+        });
+      })(bs[k]);
+    }
+  }
+
+  function atualizar() {
+    var partes = [];
+    if (escolha.servico) partes.push('<b>' + escolha.servico + '</b>');
+    if (escolha.dia) {
+      partes.push(NOMES[escolha.dia.data.getDay()] + ', ' + escolha.dia.data.getDate() + ' de ' + MES[escolha.dia.data.getMonth()]);
+    }
+    if (escolha.hora) partes.push('às <b>' + escolha.hora + '</b>');
+    resumo.innerHTML = partes.length ? partes.join(' · ') : '';
+
+    var txt = 'Olá! Vim pelo site';
+    if (escolha.servico) txt += ' e queria agendar ' + escolha.servico;
+    else txt += ' e queria agendar um horário';
+    if (escolha.dia) {
+      txt += ' para ' + NOMES[escolha.dia.data.getDay()] + ', dia ' + escolha.dia.data.getDate() + '/' + (escolha.dia.data.getMonth() + 1);
+    }
+    if (escolha.hora) txt += ' às ' + escolha.hora;
+    txt += '. Esse horário está livre?';
+    enviar.setAttribute('href', wa + '?text=' + encodeURIComponent(txt));
+    enviar.textContent = escolha.hora ? 'Pedir esse horário no WhatsApp' : 'Pedir horário no WhatsApp';
+  }
+  atualizar();
+})();
+
 
   /* Menu: abre e fecha no celular, fecha ao escolher uma secao, e marca a secao
      que esta na tela. E tudo ancora, entao nao ha rota nem carregamento. */
